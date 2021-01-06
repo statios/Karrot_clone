@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
+		F9E7DAC425A5A990007788AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC325A5A990007788AC /* SceneDelegate.swift */; };
+		F9E7DAC625A5A990007788AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC525A5A990007788AC /* ViewController.swift */; };
+		F9E7DAC925A5A990007788AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DAC725A5A990007788AC /* Main.storyboard */; };
+		F9E7DACB25A5A991007788AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Assets.xcassets */; };
+		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
+		F9E7DAD925A5A991007788AC /* Karrot_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */; };
+		F9E7DAE425A5A991007788AC /* Karrot_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAE325A5A991007788AC /* Karrot_cloneUITests.swift */; };
+		F9E7DAFC25A5AC19007788AC /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAF825A5AC19007788AC /* PINCache.framework */; };
+		F9E7DAFD25A5AC19007788AC /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAF925A5AC19007788AC /* AsyncDisplayKit.framework */; };
+		F9E7DAFE25A5AC19007788AC /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */; };
+		F9E7DAFF25A5AC19007788AC /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAFB25A5AC19007788AC /* PINOperation.framework */; };
+		F9E7DB0925A5AD80007788AC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0825A5AD80007788AC /* RxSwift */; };
+		F9E7DB0B25A5AD80007788AC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0A25A5AD80007788AC /* RxTest */; };
+		F9E7DB0D25A5AD80007788AC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0C25A5AD80007788AC /* RxRelay */; };
+		F9E7DB0F25A5AD80007788AC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0E25A5AD80007788AC /* RxCocoa */; };
+		F9E7DB1125A5AD80007788AC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1025A5AD80007788AC /* RxBlocking */; };
+		F9E7DB1725A5AD98007788AC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1625A5AD98007788AC /* Then */; };
+		F9E7DB1D25A5ADB0007788AC /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1C25A5ADB0007788AC /* Resolver */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9E7DAD525A5A991007788AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E7DAB625A5A990007788AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E7DABD25A5A990007788AC;
+			remoteInfo = Karrot_clone;
+		};
+		F9E7DAE025A5A991007788AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E7DAB625A5A990007788AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E7DABD25A5A990007788AC;
+			remoteInfo = Karrot_clone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9E7DAC325A5A990007788AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F9E7DAC525A5A990007788AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9E7DAC825A5A990007788AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9E7DACA25A5A991007788AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9E7DACD25A5A991007788AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9E7DACF25A5A991007788AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Karrot_cloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Karrot_cloneTests.swift; sourceTree = "<group>"; };
+		F9E7DADA25A5A991007788AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E7DADF25A5A991007788AC /* Karrot_cloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Karrot_cloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E7DAE325A5A991007788AC /* Karrot_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Karrot_cloneUITests.swift; sourceTree = "<group>"; };
+		F9E7DAE525A5A991007788AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E7DAF825A5AC19007788AC /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
+		F9E7DAF925A5AC19007788AC /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = Carthage/Build/iOS/AsyncDisplayKit.framework; sourceTree = "<group>"; };
+		F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
+		F9E7DAFB25A5AC19007788AC /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9E7DABB25A5A990007788AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DB1D25A5ADB0007788AC /* Resolver in Frameworks */,
+				F9E7DB0D25A5AD80007788AC /* RxRelay in Frameworks */,
+				F9E7DAFC25A5AC19007788AC /* PINCache.framework in Frameworks */,
+				F9E7DAFD25A5AC19007788AC /* AsyncDisplayKit.framework in Frameworks */,
+				F9E7DB1725A5AD98007788AC /* Then in Frameworks */,
+				F9E7DB0F25A5AD80007788AC /* RxCocoa in Frameworks */,
+				F9E7DB0925A5AD80007788AC /* RxSwift in Frameworks */,
+				F9E7DAFE25A5AC19007788AC /* PINRemoteImage.framework in Frameworks */,
+				F9E7DAFF25A5AC19007788AC /* PINOperation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DAD125A5A991007788AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DB0B25A5AD80007788AC /* RxTest in Frameworks */,
+				F9E7DB1125A5AD80007788AC /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DADC25A5A991007788AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9E7DAB525A5A990007788AC = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAC025A5A990007788AC /* Karrot_clone */,
+				F9E7DAD725A5A991007788AC /* Karrot_cloneTests */,
+				F9E7DAE225A5A991007788AC /* Karrot_cloneUITests */,
+				F9E7DABF25A5A990007788AC /* Products */,
+				F9E7DAF725A5AC19007788AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9E7DABF25A5A990007788AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DABE25A5A990007788AC /* Karrot_clone.app */,
+				F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */,
+				F9E7DADF25A5A991007788AC /* Karrot_cloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E7DAC025A5A990007788AC /* Karrot_clone */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAC125A5A990007788AC /* AppDelegate.swift */,
+				F9E7DAC325A5A990007788AC /* SceneDelegate.swift */,
+				F9E7DAC525A5A990007788AC /* ViewController.swift */,
+				F9E7DAC725A5A990007788AC /* Main.storyboard */,
+				F9E7DACA25A5A991007788AC /* Assets.xcassets */,
+				F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */,
+				F9E7DACF25A5A991007788AC /* Info.plist */,
+			);
+			path = Karrot_clone;
+			sourceTree = "<group>";
+		};
+		F9E7DAD725A5A991007788AC /* Karrot_cloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */,
+				F9E7DADA25A5A991007788AC /* Info.plist */,
+			);
+			path = Karrot_cloneTests;
+			sourceTree = "<group>";
+		};
+		F9E7DAE225A5A991007788AC /* Karrot_cloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAE325A5A991007788AC /* Karrot_cloneUITests.swift */,
+				F9E7DAE525A5A991007788AC /* Info.plist */,
+			);
+			path = Karrot_cloneUITests;
+			sourceTree = "<group>";
+		};
+		F9E7DAF725A5AC19007788AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAF925A5AC19007788AC /* AsyncDisplayKit.framework */,
+				F9E7DAF825A5AC19007788AC /* PINCache.framework */,
+				F9E7DAFB25A5AC19007788AC /* PINOperation.framework */,
+				F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9E7DABD25A5A990007788AC /* Karrot_clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E7DAE825A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_clone" */;
+			buildPhases = (
+				F9E7DABA25A5A990007788AC /* Sources */,
+				F9E7DABB25A5A990007788AC /* Frameworks */,
+				F9E7DABC25A5A990007788AC /* Resources */,
+				F9E7DB0025A5AC2B007788AC /* Run Carthage Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Karrot_clone;
+			packageProductDependencies = (
+				F9E7DB0825A5AD80007788AC /* RxSwift */,
+				F9E7DB0C25A5AD80007788AC /* RxRelay */,
+				F9E7DB0E25A5AD80007788AC /* RxCocoa */,
+				F9E7DB1625A5AD98007788AC /* Then */,
+				F9E7DB1C25A5ADB0007788AC /* Resolver */,
+			);
+			productName = Karrot_clone;
+			productReference = F9E7DABE25A5A990007788AC /* Karrot_clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9E7DAD325A5A991007788AC /* Karrot_cloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E7DAEB25A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_cloneTests" */;
+			buildPhases = (
+				F9E7DAD025A5A991007788AC /* Sources */,
+				F9E7DAD125A5A991007788AC /* Frameworks */,
+				F9E7DAD225A5A991007788AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9E7DAD625A5A991007788AC /* PBXTargetDependency */,
+			);
+			name = Karrot_cloneTests;
+			packageProductDependencies = (
+				F9E7DB0A25A5AD80007788AC /* RxTest */,
+				F9E7DB1025A5AD80007788AC /* RxBlocking */,
+			);
+			productName = Karrot_cloneTests;
+			productReference = F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9E7DADE25A5A991007788AC /* Karrot_cloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E7DAEE25A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_cloneUITests" */;
+			buildPhases = (
+				F9E7DADB25A5A991007788AC /* Sources */,
+				F9E7DADC25A5A991007788AC /* Frameworks */,
+				F9E7DADD25A5A991007788AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9E7DAE125A5A991007788AC /* PBXTargetDependency */,
+			);
+			name = Karrot_cloneUITests;
+			productName = Karrot_cloneUITests;
+			productReference = F9E7DADF25A5A991007788AC /* Karrot_cloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9E7DAB625A5A990007788AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F9E7DABD25A5A990007788AC = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F9E7DAD325A5A991007788AC = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F9E7DABD25A5A990007788AC;
+					};
+					F9E7DADE25A5A991007788AC = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F9E7DABD25A5A990007788AC;
+					};
+				};
+			};
+			buildConfigurationList = F9E7DAB925A5A990007788AC /* Build configuration list for PBXProject "Karrot_clone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9E7DAB525A5A990007788AC;
+			packageReferences = (
+				F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F9E7DB1525A5AD98007788AC /* XCRemoteSwiftPackageReference "Then" */,
+				F9E7DB1B25A5ADB0007788AC /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
+			productRefGroup = F9E7DABF25A5A990007788AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9E7DABD25A5A990007788AC /* Karrot_clone */,
+				F9E7DAD325A5A991007788AC /* Karrot_cloneTests */,
+				F9E7DADE25A5A991007788AC /* Karrot_cloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9E7DABC25A5A990007788AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */,
+				F9E7DACB25A5A991007788AC /* Assets.xcassets in Resources */,
+				F9E7DAC925A5A990007788AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DAD225A5A991007788AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DADD25A5A991007788AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F9E7DB0025A5AC2B007788AC /* Run Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AsyncDisplayKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINOperation.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
+			);
+			name = "Run Carthage Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9E7DABA25A5A990007788AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DAC625A5A990007788AC /* ViewController.swift in Sources */,
+				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
+				F9E7DAC425A5A990007788AC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DAD025A5A991007788AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DAD925A5A991007788AC /* Karrot_cloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E7DADB25A5A991007788AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E7DAE425A5A991007788AC /* Karrot_cloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9E7DAD625A5A991007788AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E7DABD25A5A990007788AC /* Karrot_clone */;
+			targetProxy = F9E7DAD525A5A991007788AC /* PBXContainerItemProxy */;
+		};
+		F9E7DAE125A5A991007788AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E7DABD25A5A990007788AC /* Karrot_clone */;
+			targetProxy = F9E7DAE025A5A991007788AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9E7DAC725A5A990007788AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E7DAC825A5A990007788AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E7DACD25A5A991007788AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9E7DAE625A5A991007788AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9E7DAE725A5A991007788AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9E7DAE925A5A991007788AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Karrot_clone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E7DAEA25A5A991007788AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Karrot_clone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9E7DAEC25A5A991007788AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Karrot_cloneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-cloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karrot_clone.app/Karrot_clone";
+			};
+			name = Debug;
+		};
+		F9E7DAED25A5A991007788AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Karrot_cloneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-cloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karrot_clone.app/Karrot_clone";
+			};
+			name = Release;
+		};
+		F9E7DAEF25A5A991007788AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Karrot_cloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-cloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Karrot_clone;
+			};
+			name = Debug;
+		};
+		F9E7DAF025A5A991007788AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Karrot_cloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-cloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Karrot_clone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9E7DAB925A5A990007788AC /* Build configuration list for PBXProject "Karrot_clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E7DAE625A5A991007788AC /* Debug */,
+				F9E7DAE725A5A991007788AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E7DAE825A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E7DAE925A5A991007788AC /* Debug */,
+				F9E7DAEA25A5A991007788AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E7DAEB25A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_cloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E7DAEC25A5A991007788AC /* Debug */,
+				F9E7DAED25A5A991007788AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E7DAEE25A5A991007788AC /* Build configuration list for PBXNativeTarget "Karrot_cloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E7DAEF25A5A991007788AC /* Debug */,
+				F9E7DAF025A5A991007788AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		F9E7DB1525A5AD98007788AC /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		F9E7DB1B25A5ADB0007788AC /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9E7DB0825A5AD80007788AC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F9E7DB0A25A5AD80007788AC /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		F9E7DB0C25A5AD80007788AC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F9E7DB0E25A5AD80007788AC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F9E7DB1025A5AD80007788AC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		F9E7DB1625A5AD98007788AC /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB1525A5AD98007788AC /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		F9E7DB1C25A5ADB0007788AC /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9E7DB1B25A5ADB0007788AC /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F9E7DAB625A5A990007788AC /* Project object */;
+}
