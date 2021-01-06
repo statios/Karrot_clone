@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
-		F9E7DAC425A5A990007788AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC325A5A990007788AC /* SceneDelegate.swift */; };
-		F9E7DAC625A5A990007788AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC525A5A990007788AC /* ViewController.swift */; };
-		F9E7DAC925A5A990007788AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DAC725A5A990007788AC /* Main.storyboard */; };
-		F9E7DACB25A5A991007788AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Assets.xcassets */; };
+		F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Image.xcassets */; };
 		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
 		F9E7DAD925A5A991007788AC /* Karrot_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */; };
 		F9E7DAE425A5A991007788AC /* Karrot_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAE325A5A991007788AC /* Karrot_cloneUITests.swift */; };
@@ -26,6 +23,17 @@
 		F9E7DB1125A5AD80007788AC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1025A5AD80007788AC /* RxBlocking */; };
 		F9E7DB1725A5AD98007788AC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1625A5AD98007788AC /* Then */; };
 		F9E7DB1D25A5ADB0007788AC /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1C25A5ADB0007788AC /* Resolver */; };
+		F9E7DB5825A5B09A007788AC /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB5725A5B09A007788AC /* Logging.swift */; };
+		F9E7DB6C25A5B103007788AC /* BaseASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB6B25A5B103007788AC /* BaseASViewController.swift */; };
+		F9E7DB7125A5B110007788AC /* BaseASTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB7025A5B110007788AC /* BaseASTabBarController.swift */; };
+		F9E7DB7625A5B116007788AC /* BaseASNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB7525A5B116007788AC /* BaseASNavigationController.swift */; };
+		F9E7DB7B25A5B11C007788AC /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB7A25A5B11C007788AC /* BaseInteractor.swift */; };
+		F9E7DB8025A5B121007788AC /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB7F25A5B121007788AC /* BaseNode.swift */; };
+		F9E7DB8525A5B125007788AC /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB8425A5B125007788AC /* BasePresenter.swift */; };
+		F9E7DB8A25A5B12A007788AC /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB8925A5B12A007788AC /* BaseRouter.swift */; };
+		F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB8E25A5B132007788AC /* BaseWorker.swift */; };
+		F9E7DB9425A5B139007788AC /* BaseCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9325A5B139007788AC /* BaseCellNode.swift */; };
+		F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +56,7 @@
 /* Begin PBXFileReference section */
 		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9E7DAC325A5A990007788AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9E7DAC525A5A990007788AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9E7DAC825A5A990007788AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F9E7DACA25A5A991007788AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9E7DACA25A5A991007788AC /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F9E7DACD25A5A991007788AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9E7DACF25A5A991007788AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Karrot_cloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +69,17 @@
 		F9E7DAF925A5AC19007788AC /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = Carthage/Build/iOS/AsyncDisplayKit.framework; sourceTree = "<group>"; };
 		F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
 		F9E7DAFB25A5AC19007788AC /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
+		F9E7DB5725A5B09A007788AC /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		F9E7DB6B25A5B103007788AC /* BaseASViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASViewController.swift; sourceTree = "<group>"; };
+		F9E7DB7025A5B110007788AC /* BaseASTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASTabBarController.swift; sourceTree = "<group>"; };
+		F9E7DB7525A5B116007788AC /* BaseASNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseASNavigationController.swift; sourceTree = "<group>"; };
+		F9E7DB7A25A5B11C007788AC /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		F9E7DB7F25A5B121007788AC /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
+		F9E7DB8425A5B125007788AC /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		F9E7DB8925A5B12A007788AC /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F9E7DB8E25A5B132007788AC /* BaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
+		F9E7DB9325A5B139007788AC /* BaseCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellNode.swift; sourceTree = "<group>"; };
+		F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +142,9 @@
 		F9E7DAC025A5A990007788AC /* Karrot_clone */ = {
 			isa = PBXGroup;
 			children = (
-				F9E7DAC125A5A990007788AC /* AppDelegate.swift */,
-				F9E7DAC325A5A990007788AC /* SceneDelegate.swift */,
-				F9E7DAC525A5A990007788AC /* ViewController.swift */,
-				F9E7DAC725A5A990007788AC /* Main.storyboard */,
-				F9E7DACA25A5A991007788AC /* Assets.xcassets */,
-				F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */,
-				F9E7DACF25A5A991007788AC /* Info.plist */,
+				F9E7DB2625A5AEB5007788AC /* Sources */,
+				F9E7DB2525A5AEB3007788AC /* Resources */,
+				F9E7DB2425A5AEB0007788AC /* Supportings */,
 			);
 			path = Karrot_clone;
 			sourceTree = "<group>";
@@ -164,6 +176,138 @@
 				F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E7DB2425A5AEB0007788AC /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB2E25A5AEDC007788AC /* plists */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		F9E7DB2525A5AEB3007788AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB3325A5AEF0007788AC /* Assets */,
+				F9E7DB2F25A5AEE6007788AC /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F9E7DB2625A5AEB5007788AC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB2725A5AEC9007788AC /* Application */,
+				F9E7DB3425A5AF0A007788AC /* Scenes */,
+				F9E7DB4B25A5AF7D007788AC /* Workers */,
+				F9E7DB4C25A5AF84007788AC /* Common */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F9E7DB2725A5AEC9007788AC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DAC125A5A990007788AC /* AppDelegate.swift */,
+				F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F9E7DB2E25A5AEDC007788AC /* plists */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DACF25A5A991007788AC /* Info.plist */,
+			);
+			path = plists;
+			sourceTree = "<group>";
+		};
+		F9E7DB2F25A5AEE6007788AC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F9E7DB3325A5AEF0007788AC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DACA25A5A991007788AC /* Image.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F9E7DB3425A5AF0A007788AC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F9E7DB4B25A5AF7D007788AC /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F9E7DB4C25A5AF84007788AC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB5325A5AFBA007788AC /* Constants */,
+				F9E7DB5225A5AFB7007788AC /* Bases */,
+				F9E7DB5125A5AFB2007788AC /* Utils */,
+				F9E7DB5025A5AFAC007788AC /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F9E7DB5025A5AFAC007788AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB5F25A5B0AE007788AC /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F9E7DB5125A5AFB2007788AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB5725A5B09A007788AC /* Logging.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F9E7DB5225A5AFB7007788AC /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB6B25A5B103007788AC /* BaseASViewController.swift */,
+				F9E7DB7025A5B110007788AC /* BaseASTabBarController.swift */,
+				F9E7DB7525A5B116007788AC /* BaseASNavigationController.swift */,
+				F9E7DB7A25A5B11C007788AC /* BaseInteractor.swift */,
+				F9E7DB7F25A5B121007788AC /* BaseNode.swift */,
+				F9E7DB8425A5B125007788AC /* BasePresenter.swift */,
+				F9E7DB8925A5B12A007788AC /* BaseRouter.swift */,
+				F9E7DB8E25A5B132007788AC /* BaseWorker.swift */,
+				F9E7DB9325A5B139007788AC /* BaseCellNode.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		F9E7DB5325A5AFBA007788AC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F9E7DB5F25A5B0AE007788AC /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */,
-				F9E7DACB25A5A991007788AC /* Assets.xcassets in Resources */,
-				F9E7DAC925A5A990007788AC /* Main.storyboard in Resources */,
+				F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +481,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E7DAC625A5A990007788AC /* ViewController.swift in Sources */,
+				F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */,
 				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
-				F9E7DAC425A5A990007788AC /* SceneDelegate.swift in Sources */,
+				F9E7DB8A25A5B12A007788AC /* BaseRouter.swift in Sources */,
+				F9E7DB8525A5B125007788AC /* BasePresenter.swift in Sources */,
+				F9E7DB7625A5B116007788AC /* BaseASNavigationController.swift in Sources */,
+				F9E7DB5825A5B09A007788AC /* Logging.swift in Sources */,
+				F9E7DB7125A5B110007788AC /* BaseASTabBarController.swift in Sources */,
+				F9E7DB9425A5B139007788AC /* BaseCellNode.swift in Sources */,
+				F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */,
+				F9E7DB6C25A5B103007788AC /* BaseASViewController.swift in Sources */,
+				F9E7DB7B25A5B11C007788AC /* BaseInteractor.swift in Sources */,
+				F9E7DB8025A5B121007788AC /* BaseNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,14 +528,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9E7DAC725A5A990007788AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9E7DAC825A5A990007788AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,7 +666,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Karrot_clone/Info.plist;
+				INFOPLIST_FILE = Karrot_clone/Supportings/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -546,7 +690,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Karrot_clone/Info.plist;
+				INFOPLIST_FILE = Karrot_clone/Supportings/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,7 +699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.statios.Karrot-clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
