@@ -16,6 +16,7 @@ class BaseCellNode: ASCellNode {
   override init() {
     super.init()
     automaticallyManagesSubnodes = true
+    selectionStyle = .none
   }
 }
 

@@ -34,6 +34,36 @@
 		F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB8E25A5B132007788AC /* BaseWorker.swift */; };
 		F9E7DB9425A5B139007788AC /* BaseCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9325A5B139007788AC /* BaseCellNode.swift */; };
 		F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */; };
+		F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */; };
+		F9E7DBBE25A5B4C2007788AC /* SplashWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */; };
+		F9E7DBBF25A5B4C2007788AC /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */; };
+		F9E7DBC025A5B4C2007788AC /* SplashModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */; };
+		F9E7DBC125A5B4C2007788AC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */; };
+		F9E7DBC225A5B4C2007788AC /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */; };
+		F9E7DBD025A5B615007788AC /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCA25A5B615007788AC /* FeedPresenter.swift */; };
+		F9E7DBD125A5B615007788AC /* FeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCB25A5B615007788AC /* FeedWorker.swift */; };
+		F9E7DBD225A5B615007788AC /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCC25A5B615007788AC /* FeedRouter.swift */; };
+		F9E7DBD325A5B615007788AC /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCD25A5B615007788AC /* FeedModels.swift */; };
+		F9E7DBD425A5B615007788AC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCE25A5B615007788AC /* FeedViewController.swift */; };
+		F9E7DBD525A5B615007788AC /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCF25A5B615007788AC /* FeedInteractor.swift */; };
+		F9E7DBE525A5B906007788AC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBE425A5B906007788AC /* UIViewController+.swift */; };
+		F9E7DBEF25A5BDA7007788AC /* ASControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBEE25A5BDA7007788AC /* ASControlTarget.swift */; };
+		F9E7DBF425A5BDC8007788AC /* ASRxTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBF325A5BDC8007788AC /* ASRxTarget.swift */; };
+		F9E7DBF925A5BE66007788AC /* ASButtonNode+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBF825A5BE66007788AC /* ASButtonNode+Rx.swift */; };
+		F9E7DC0125A5BECB007788AC /* ASControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC0025A5BECB007788AC /* ASControlNode.swift */; };
+		F9E7DC1925A5F842007788AC /* FleaMarketWriteFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1325A5F842007788AC /* FleaMarketWriteFormPresenter.swift */; };
+		F9E7DC1A25A5F842007788AC /* FleaMarketWriteFormWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1425A5F842007788AC /* FleaMarketWriteFormWorker.swift */; };
+		F9E7DC1B25A5F842007788AC /* FleaMarketWriteFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1525A5F842007788AC /* FleaMarketWriteFormRouter.swift */; };
+		F9E7DC1C25A5F842007788AC /* FleaMarketWriteFormModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1625A5F842007788AC /* FleaMarketWriteFormModels.swift */; };
+		F9E7DC1D25A5F842007788AC /* FleaMarketWriteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1725A5F842007788AC /* FleaMarketWriteFormViewController.swift */; };
+		F9E7DC1E25A5F842007788AC /* FleaMarketWriteFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC1825A5F842007788AC /* FleaMarketWriteFormInteractor.swift */; };
+		F9E7DC2725A5FAAC007788AC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC2625A5FAAC007788AC /* Image.swift */; };
+		F9E7DC2C25A5FC00007788AC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC2B25A5FC00007788AC /* UIView+.swift */; };
+		F9E7DC3525A5FF78007788AC /* FleaMarketSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC3425A5FF78007788AC /* FleaMarketSelectionCell.swift */; };
+		F9E7DC3D25A5FFD7007788AC /* FleaMarketPriceInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC3C25A5FFD7007788AC /* FleaMarketPriceInputCell.swift */; };
+		F9E7DC4225A5FFE7007788AC /* FleaMarketContentFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC4125A5FFE7007788AC /* FleaMarketContentFieldCell.swift */; };
+		F9E7DC4825A60265007788AC /* TextFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC4725A60265007788AC /* TextFieldNode.swift */; };
+		F9E7DC5125A60B6B007788AC /* FleaMarketCellKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DC5025A60B6B007788AC /* FleaMarketCellKind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +110,36 @@
 		F9E7DB8E25A5B132007788AC /* BaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
 		F9E7DB9325A5B139007788AC /* BaseCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellNode.swift; sourceTree = "<group>"; };
 		F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
+		F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWorker.swift; sourceTree = "<group>"; };
+		F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModels.swift; sourceTree = "<group>"; };
+		F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		F9E7DBCA25A5B615007788AC /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		F9E7DBCB25A5B615007788AC /* FeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorker.swift; sourceTree = "<group>"; };
+		F9E7DBCC25A5B615007788AC /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		F9E7DBCD25A5B615007788AC /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
+		F9E7DBCE25A5B615007788AC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F9E7DBCF25A5B615007788AC /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		F9E7DBE425A5B906007788AC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		F9E7DBEE25A5BDA7007788AC /* ASControlTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASControlTarget.swift; sourceTree = "<group>"; };
+		F9E7DBF325A5BDC8007788AC /* ASRxTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRxTarget.swift; sourceTree = "<group>"; };
+		F9E7DBF825A5BE66007788AC /* ASButtonNode+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASButtonNode+Rx.swift"; sourceTree = "<group>"; };
+		F9E7DC0025A5BECB007788AC /* ASControlNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASControlNode.swift; sourceTree = "<group>"; };
+		F9E7DC1325A5F842007788AC /* FleaMarketWriteFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormPresenter.swift; sourceTree = "<group>"; };
+		F9E7DC1425A5F842007788AC /* FleaMarketWriteFormWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormWorker.swift; sourceTree = "<group>"; };
+		F9E7DC1525A5F842007788AC /* FleaMarketWriteFormRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormRouter.swift; sourceTree = "<group>"; };
+		F9E7DC1625A5F842007788AC /* FleaMarketWriteFormModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormModels.swift; sourceTree = "<group>"; };
+		F9E7DC1725A5F842007788AC /* FleaMarketWriteFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormViewController.swift; sourceTree = "<group>"; };
+		F9E7DC1825A5F842007788AC /* FleaMarketWriteFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormInteractor.swift; sourceTree = "<group>"; };
+		F9E7DC2625A5FAAC007788AC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F9E7DC2B25A5FC00007788AC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		F9E7DC3425A5FF78007788AC /* FleaMarketSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketSelectionCell.swift; sourceTree = "<group>"; };
+		F9E7DC3C25A5FFD7007788AC /* FleaMarketPriceInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketPriceInputCell.swift; sourceTree = "<group>"; };
+		F9E7DC4125A5FFE7007788AC /* FleaMarketContentFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketContentFieldCell.swift; sourceTree = "<group>"; };
+		F9E7DC4725A60265007788AC /* TextFieldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNode.swift; sourceTree = "<group>"; };
+		F9E7DC5025A60B6B007788AC /* FleaMarketCellKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketCellKind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +302,9 @@
 		F9E7DB3425A5AF0A007788AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7DBA125A5B3A4007788AC /* Splash */,
+				F9E7DBC925A5B606007788AC /* Feed */,
+				F9E7DC0725A5F7E4007788AC /* FleaMarketWriteForm */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -256,6 +319,7 @@
 		F9E7DB4C25A5AF84007788AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7DC4625A6025D007788AC /* Components */,
 				F9E7DB5325A5AFBA007788AC /* Constants */,
 				F9E7DB5225A5AFB7007788AC /* Bases */,
 				F9E7DB5125A5AFB2007788AC /* Utils */,
@@ -267,6 +331,7 @@
 		F9E7DB5025A5AFAC007788AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7DBE325A5B8FF007788AC /* UIKit */,
 				F9E7DB5F25A5B0AE007788AC /* Foundation */,
 			);
 			path = Extensions;
@@ -275,7 +340,8 @@
 		F9E7DB5125A5AFB2007788AC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F9E7DB5725A5B09A007788AC /* Logging.swift */,
+				F9E7DBEC25A5BD91007788AC /* RxTexture */,
+				F9E7DBED25A5BD9A007788AC /* Logging */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -299,6 +365,7 @@
 		F9E7DB5325A5AFBA007788AC /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7DC2625A5FAAC007788AC /* Image.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -308,6 +375,101 @@
 			children = (
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F9E7DBA125A5B3A4007788AC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */,
+				F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */,
+				F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */,
+				F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */,
+				F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */,
+				F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F9E7DBC925A5B606007788AC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DBCE25A5B615007788AC /* FeedViewController.swift */,
+				F9E7DBCF25A5B615007788AC /* FeedInteractor.swift */,
+				F9E7DBCA25A5B615007788AC /* FeedPresenter.swift */,
+				F9E7DBCB25A5B615007788AC /* FeedWorker.swift */,
+				F9E7DBCC25A5B615007788AC /* FeedRouter.swift */,
+				F9E7DBCD25A5B615007788AC /* FeedModels.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F9E7DBE325A5B8FF007788AC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DBE425A5B906007788AC /* UIViewController+.swift */,
+				F9E7DC2B25A5FC00007788AC /* UIView+.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F9E7DBEC25A5BD91007788AC /* RxTexture */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DBEE25A5BDA7007788AC /* ASControlTarget.swift */,
+				F9E7DBF325A5BDC8007788AC /* ASRxTarget.swift */,
+				F9E7DBF825A5BE66007788AC /* ASButtonNode+Rx.swift */,
+				F9E7DC0025A5BECB007788AC /* ASControlNode.swift */,
+			);
+			path = RxTexture;
+			sourceTree = "<group>";
+		};
+		F9E7DBED25A5BD9A007788AC /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DB5725A5B09A007788AC /* Logging.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		F9E7DC0725A5F7E4007788AC /* FleaMarketWriteForm */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DC1725A5F842007788AC /* FleaMarketWriteFormViewController.swift */,
+				F9E7DC1825A5F842007788AC /* FleaMarketWriteFormInteractor.swift */,
+				F9E7DC1325A5F842007788AC /* FleaMarketWriteFormPresenter.swift */,
+				F9E7DC1425A5F842007788AC /* FleaMarketWriteFormWorker.swift */,
+				F9E7DC1525A5F842007788AC /* FleaMarketWriteFormRouter.swift */,
+				F9E7DC1625A5F842007788AC /* FleaMarketWriteFormModels.swift */,
+				F9E7DC3325A5FF65007788AC /* Nodes */,
+				F9E7DC4F25A60B50007788AC /* Helpers */,
+			);
+			path = FleaMarketWriteForm;
+			sourceTree = "<group>";
+		};
+		F9E7DC3325A5FF65007788AC /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DC3425A5FF78007788AC /* FleaMarketSelectionCell.swift */,
+				F9E7DC3C25A5FFD7007788AC /* FleaMarketPriceInputCell.swift */,
+				F9E7DC4125A5FFE7007788AC /* FleaMarketContentFieldCell.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F9E7DC4625A6025D007788AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DC4725A60265007788AC /* TextFieldNode.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F9E7DC4F25A60B50007788AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7DC5025A60B6B007788AC /* FleaMarketCellKind.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,18 +643,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E7DBD425A5B615007788AC /* FeedViewController.swift in Sources */,
+				F9E7DC2725A5FAAC007788AC /* Image.swift in Sources */,
 				F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */,
+				F9E7DBD125A5B615007788AC /* FeedWorker.swift in Sources */,
+				F9E7DC2C25A5FC00007788AC /* UIView+.swift in Sources */,
 				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
+				F9E7DBD225A5B615007788AC /* FeedRouter.swift in Sources */,
+				F9E7DBBE25A5B4C2007788AC /* SplashWorker.swift in Sources */,
+				F9E7DC1C25A5F842007788AC /* FleaMarketWriteFormModels.swift in Sources */,
+				F9E7DBD325A5B615007788AC /* FeedModels.swift in Sources */,
+				F9E7DBC125A5B4C2007788AC /* SplashViewController.swift in Sources */,
 				F9E7DB8A25A5B12A007788AC /* BaseRouter.swift in Sources */,
 				F9E7DB8525A5B125007788AC /* BasePresenter.swift in Sources */,
 				F9E7DB7625A5B116007788AC /* BaseASNavigationController.swift in Sources */,
 				F9E7DB5825A5B09A007788AC /* Logging.swift in Sources */,
 				F9E7DB7125A5B110007788AC /* BaseASTabBarController.swift in Sources */,
+				F9E7DC1D25A5F842007788AC /* FleaMarketWriteFormViewController.swift in Sources */,
 				F9E7DB9425A5B139007788AC /* BaseCellNode.swift in Sources */,
+				F9E7DC1E25A5F842007788AC /* FleaMarketWriteFormInteractor.swift in Sources */,
+				F9E7DBD525A5B615007788AC /* FeedInteractor.swift in Sources */,
 				F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */,
+				F9E7DC1925A5F842007788AC /* FleaMarketWriteFormPresenter.swift in Sources */,
+				F9E7DC3525A5FF78007788AC /* FleaMarketSelectionCell.swift in Sources */,
+				F9E7DBBF25A5B4C2007788AC /* SplashRouter.swift in Sources */,
 				F9E7DB6C25A5B103007788AC /* BaseASViewController.swift in Sources */,
+				F9E7DBC225A5B4C2007788AC /* SplashInteractor.swift in Sources */,
+				F9E7DC3D25A5FFD7007788AC /* FleaMarketPriceInputCell.swift in Sources */,
+				F9E7DBD025A5B615007788AC /* FeedPresenter.swift in Sources */,
+				F9E7DBC025A5B4C2007788AC /* SplashModels.swift in Sources */,
+				F9E7DC1B25A5F842007788AC /* FleaMarketWriteFormRouter.swift in Sources */,
+				F9E7DBE525A5B906007788AC /* UIViewController+.swift in Sources */,
 				F9E7DB7B25A5B11C007788AC /* BaseInteractor.swift in Sources */,
 				F9E7DB8025A5B121007788AC /* BaseNode.swift in Sources */,
+				F9E7DC1A25A5F842007788AC /* FleaMarketWriteFormWorker.swift in Sources */,
+				F9E7DC5125A60B6B007788AC /* FleaMarketCellKind.swift in Sources */,
+				F9E7DBF425A5BDC8007788AC /* ASRxTarget.swift in Sources */,
+				F9E7DBEF25A5BDA7007788AC /* ASControlTarget.swift in Sources */,
+				F9E7DC4225A5FFE7007788AC /* FleaMarketContentFieldCell.swift in Sources */,
+				F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */,
+				F9E7DC0125A5BECB007788AC /* ASControlNode.swift in Sources */,
+				F9E7DC4825A60265007788AC /* TextFieldNode.swift in Sources */,
+				F9E7DBF925A5BE66007788AC /* ASButtonNode+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

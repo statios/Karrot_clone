@@ -37,5 +37,10 @@ class BaseASViewController: ASDKViewController<BaseNode> {
   @objc dynamic func layoutSpec(node: ASDisplayNode, size: ASSizeRange) -> ASLayoutSpec {
     return ASLayoutSpec()
   }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    node.backgroundColor = .white
+  }
 }
 
