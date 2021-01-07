@@ -26,8 +26,8 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
   }
   private lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
-    $0.view.isScrollEnabled = false
     $0.view.keyboardDismissMode = .interactive
+    $0.view.isScrollEnabled = false
   }
   
 }

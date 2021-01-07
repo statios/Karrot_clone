@@ -12,18 +12,21 @@ final class FleaMarketContentFieldCell: BaseCellNode {
   var canFillHeight = Device.height - 350
   
   private lazy var textViewNode = ASEditableTextNode().then {
-    $0.backgroundColor = .red
     $0.style.preferredSize.height = canFillHeight
+    $0.typingAttributes = [
+      NSAttributedString.Key.font.rawValue: UIFont.systemFont(ofSize: 17)
+    ]
   }
   
   override func didLoad() {
     super.didLoad()
     RxKeyboard.instance.visibleHeight
-      .delay(.milliseconds(500))
+      .debug()
       .drive(onNext: { [weak self] in
         guard let `self` = self else { return }
         self.textViewNode.style.preferredSize.height = self.canFillHeight - $0
         self.textViewNode.setNeedsLayout()
+        self.setNeedsLayout()
       }).disposed(by: disposeBag)
   }
   
