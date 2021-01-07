@@ -26,7 +26,10 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
   }
   private lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
+    $0.view.isScrollEnabled = false
+    $0.view.keyboardDismissMode = .interactive
   }
+  
 }
 
 // MARK: - Configure
@@ -37,11 +40,6 @@ extension FleaMarketWriteFormViewController {
           let presenter = interactor.presenter as? FleaMarketWriteFormPresenter else { return }
     router.viewController = self
     presenter.viewController = self
-    
-    closeButton.rx.tap
-      .bind { [weak self] in
-        self?.dismiss(animated: true)
-      }.disposed(by: disposeBag)
   }
 }
 
@@ -50,6 +48,11 @@ extension FleaMarketWriteFormViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.leftBarButtonItem = closeButton.asBarButtonItem()
+    
+    closeButton.rx.tap
+      .bind { [weak self] in
+        self?.dismiss(animated: true)
+      }.disposed(by: disposeBag)
   }
 }
 

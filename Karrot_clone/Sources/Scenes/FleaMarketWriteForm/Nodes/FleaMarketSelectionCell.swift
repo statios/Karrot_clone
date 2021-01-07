@@ -13,9 +13,14 @@ final class FleaMarketSelectionCell: BaseCellNode {
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
     return ASInsetLayoutSpec(
-      insets: .init(top: 24, left: 16, bottom: 24, right: 0),
+      insets: .init(top: 24, left: 16, bottom: 24, right: 16),
       child: titleTextNode
     )
+  }
+  
+  override func layout() {
+    super.layout()
+    Log.error(self.frame.height)
   }
   
   func configure(title: String) {

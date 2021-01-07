@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9A7A5D825A61399004CFA9E /* BaseTableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5D725A61399004CFA9E /* BaseTableNode.swift */; };
+		F9A7A5E225A6BA0B004CFA9E /* RxKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5E125A6BA0B004CFA9E /* RxKeyboard.swift */; };
+		F9A7A5EA25A6BCD4004CFA9E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5E925A6BCD4004CFA9E /* Device.swift */; };
+		F9A7A62125A6C362004CFA9E /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A62025A6C362004CFA9E /* UIApplication+.swift */; };
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
 		F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Image.xcassets */; };
 		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
@@ -84,6 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9A7A5D725A61399004CFA9E /* BaseTableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNode.swift; sourceTree = "<group>"; };
+		F9A7A5E125A6BA0B004CFA9E /* RxKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboard.swift; sourceTree = "<group>"; };
+		F9A7A5E925A6BCD4004CFA9E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F9A7A62025A6C362004CFA9E /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E7DACA25A5A991007788AC /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -178,6 +186,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9A7A5E025A6BA01004CFA9E /* RxKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F9A7A5E125A6BA0B004CFA9E /* RxKeyboard.swift */,
+			);
+			path = RxKeyboard;
+			sourceTree = "<group>";
+		};
 		F9E7DAB525A5A990007788AC = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +356,7 @@
 		F9E7DB5125A5AFB2007788AC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F9A7A5E025A6BA01004CFA9E /* RxKeyboard */,
 				F9E7DBEC25A5BD91007788AC /* RxTexture */,
 				F9E7DBED25A5BD9A007788AC /* Logging */,
 			);
@@ -358,6 +375,7 @@
 				F9E7DB8925A5B12A007788AC /* BaseRouter.swift */,
 				F9E7DB8E25A5B132007788AC /* BaseWorker.swift */,
 				F9E7DB9325A5B139007788AC /* BaseCellNode.swift */,
+				F9A7A5D725A61399004CFA9E /* BaseTableNode.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -366,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				F9E7DC2625A5FAAC007788AC /* Image.swift */,
+				F9A7A5E925A6BCD4004CFA9E /* Device.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -408,6 +427,7 @@
 			children = (
 				F9E7DBE425A5B906007788AC /* UIViewController+.swift */,
 				F9E7DC2B25A5FC00007788AC /* UIView+.swift */,
+				F9A7A62025A6C362004CFA9E /* UIApplication+.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -645,7 +665,9 @@
 			files = (
 				F9E7DBD425A5B615007788AC /* FeedViewController.swift in Sources */,
 				F9E7DC2725A5FAAC007788AC /* Image.swift in Sources */,
+				F9A7A5E225A6BA0B004CFA9E /* RxKeyboard.swift in Sources */,
 				F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */,
+				F9A7A5D825A61399004CFA9E /* BaseTableNode.swift in Sources */,
 				F9E7DBD125A5B615007788AC /* FeedWorker.swift in Sources */,
 				F9E7DC2C25A5FC00007788AC /* UIView+.swift in Sources */,
 				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
@@ -657,6 +679,7 @@
 				F9E7DB8A25A5B12A007788AC /* BaseRouter.swift in Sources */,
 				F9E7DB8525A5B125007788AC /* BasePresenter.swift in Sources */,
 				F9E7DB7625A5B116007788AC /* BaseASNavigationController.swift in Sources */,
+				F9A7A62125A6C362004CFA9E /* UIApplication+.swift in Sources */,
 				F9E7DB5825A5B09A007788AC /* Logging.swift in Sources */,
 				F9E7DB7125A5B110007788AC /* BaseASTabBarController.swift in Sources */,
 				F9E7DC1D25A5F842007788AC /* FleaMarketWriteFormViewController.swift in Sources */,
@@ -680,6 +703,7 @@
 				F9E7DC5125A60B6B007788AC /* FleaMarketCellKind.swift in Sources */,
 				F9E7DBF425A5BDC8007788AC /* ASRxTarget.swift in Sources */,
 				F9E7DBEF25A5BDA7007788AC /* ASControlTarget.swift in Sources */,
+				F9A7A5EA25A6BCD4004CFA9E /* Device.swift in Sources */,
 				F9E7DC4225A5FFE7007788AC /* FleaMarketContentFieldCell.swift in Sources */,
 				F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */,
 				F9E7DC0125A5BECB007788AC /* ASControlNode.swift in Sources */,

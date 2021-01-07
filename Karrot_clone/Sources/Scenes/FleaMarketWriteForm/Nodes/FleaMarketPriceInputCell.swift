@@ -14,7 +14,7 @@ final class FleaMarketPriceInputCell: BaseCellNode {
   
   override func didLoad() {
     textFieldNode.textField?.placeholder = "가격입력"
-    textFieldNode.
+    textFieldNode.textField?.keyboardType = .numberPad
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
