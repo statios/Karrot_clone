@@ -6,19 +6,12 @@
 //
 
 enum SplashModels {
+  
+  enum Splash {
+    struct Request {}
 
-  enum Model {
+    struct Response {}
 
-    struct Request {
-
-    }
-
-    struct Response {
-
-    }
-
-    struct ViewModel {
-
-    }
+    struct ViewModel {}
   }
 }

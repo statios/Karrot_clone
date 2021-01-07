@@ -20,7 +20,7 @@ final class FleaMarketSelectionCell: BaseCellNode {
   
   override func layout() {
     super.layout()
-    Log.error(self.frame.height)
+    
   }
   
   func configure(title: String) {

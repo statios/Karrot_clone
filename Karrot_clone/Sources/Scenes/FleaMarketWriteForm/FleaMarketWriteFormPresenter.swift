@@ -8,7 +8,8 @@
 import UIKit
 
 protocol FleaMarketWriteFormPresentationLogic: class {
-  
+  func presentCategory(response: FleaMarketWriteFormModels.Category.Response)
+  func presentCategory(response: FleaMarketWriteFormModels.Category.Response)
 }
 
 final class FleaMarketWriteFormPresenter: BasePresenter {
@@ -19,5 +20,7 @@ final class FleaMarketWriteFormPresenter: BasePresenter {
 
 // MARK: - Present
 extension FleaMarketWriteFormPresenter: FleaMarketWriteFormPresentationLogic {
-  
+  func presentCategory(response: FleaMarketWriteFormModels.Category.Response) {
+    viewController?.displayCategory(viewModel: .init())
+  }
 }

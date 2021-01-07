@@ -9,7 +9,7 @@ import UIKit
 import Resolver
 
 protocol FleaMarketWriteFormRoutingLogic: class {
-
+  func routeToCategory()
 }
 
 protocol FleaMarketWriteFormDataPassing: class {
@@ -25,7 +25,26 @@ final class FleaMarketWriteFormRouter: BaseRouter, FleaMarketWriteFormDataPassin
 
 // MARK: - Route
 extension FleaMarketWriteFormRouter: FleaMarketWriteFormRoutingLogic {
+  func routeToCategory() {
+    guard let destinationVC = Scene.category.viewController
+            as? CategoryViewController else { return }
+    
+    var destinationDS = destinationVC.router.dataStore
+    
+    passDataToCategory(source: dataStore, destination: &destinationDS)
+    
+    push(to: destinationVC, from: viewController)
+  }
+}
 
+// MARK: - DataPassing
+extension FleaMarketWriteFormRouter {
+  func passDataToCategory(
+    source: FleaMarketWriteFormDataStore,
+    destination: inout CategoryDataStore
+  ) {
+    //pass data here
+  }
 }
 
 // MARK: - Register

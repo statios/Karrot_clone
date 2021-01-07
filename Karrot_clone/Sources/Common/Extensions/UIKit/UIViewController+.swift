@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+  
   var bottomHeight: CGFloat {
     let tabBarHeight = self.tabBarController?.tabBar.frame.height ?? 0
     return tabBarHeight// + bottomSafeAreaHeight
@@ -30,6 +31,13 @@ extension UIViewController {
     let alertAction = UIAlertAction(title: button, style: .default, handler: handler)
     alertController.addAction(alertAction)
     present(alertController, animated: true)
+  }
+  
+  func withNavi() -> UIViewController {
+    let navigationController = BaseASNavigationController(rootViewController: self)
+    navigationController.modalPresentationStyle = self.modalPresentationStyle
+    navigationController.modalTransitionStyle = self.modalTransitionStyle
+    return navigationController
   }
 }
 

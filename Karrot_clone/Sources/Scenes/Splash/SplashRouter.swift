@@ -9,7 +9,7 @@ import UIKit
 import Resolver
 
 protocol SplashRoutingLogic: class {
-
+  func routeToMain()
 }
 
 protocol SplashDataPassing: class {
@@ -25,7 +25,9 @@ final class SplashRouter: BaseRouter, SplashDataPassing {
 
 // MARK: - Route
 extension SplashRouter: SplashRoutingLogic {
-
+  func routeToMain() {
+    present(to: Scene.main.viewController, from: viewController)
+  }
 }
 
 // MARK: - Register

@@ -31,14 +31,7 @@ extension SplashViewController {
     presenter.viewController = self
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
-      let mainScene = BaseAsTabBarController()
-      let feedViewController = FeedViewController()
-      feedViewController.title = "Home"
-      let feedScene = BaseASNavigationController(rootViewController: feedViewController)
-      mainScene.modalTransitionStyle = .crossDissolve
-      mainScene.setViewControllers([feedScene], animated: true)
-      mainScene.modalPresentationStyle = .fullScreen
-      self?.present(mainScene, animated: true)
+      self?.router.routeToMain()
     }
     
   }

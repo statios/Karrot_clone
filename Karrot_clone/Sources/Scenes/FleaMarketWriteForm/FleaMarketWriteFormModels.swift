@@ -7,18 +7,15 @@
 
 enum FleaMarketWriteFormModels {
 
-  enum Model {
-
-    struct Request {
-
-    }
-
-    struct Response {
-
-    }
-
-    struct ViewModel {
-
-    }
+  enum Category {
+    struct Request {}
+    struct Response {}
+    struct ViewModel {}
+  }
+  
+  enum Region {
+    struct Request {}
+    struct Response {}
+    struct ViewModel {}
   }
 }

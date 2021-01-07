@@ -12,6 +12,7 @@ extension Resolver: ResolverRegistering {
     SplashRouter.registerAllServices()
     FeedRouter.registerAllServices()
     FleaMarketWriteFormRouter.registerAllServices()
+    CategoryRouter.registerAllServices()
   }
 }
 

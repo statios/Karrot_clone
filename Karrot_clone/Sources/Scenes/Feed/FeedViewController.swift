@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol FeedDisplayLogic: class {
-
+  func displayFleaMarketWirteForm(viewModel: FeedModels.FleaMarketWriteForm.ViewModel)
 }
 
 final class FeedViewController: BaseASViewController {
@@ -36,14 +36,10 @@ extension FeedViewController {
     router.viewController = self
     presenter.viewController = self
     
-    addButtonNode.rx.tap
-      .bind { [weak self] in
-        let viewController = FleaMarketWriteFormViewController()
-        let navigationController = BaseASNavigationController(rootViewController: viewController)
-        navigationController.modalPresentationStyle = .overFullScreen
-        viewController.title = "중고거래 글쓰기"
-        self?.present(navigationController, animated: true)
-      }.disposed(by: disposeBag)
+    [
+      requestFleaMarketWriteForm(trigger: addButtonNode.rx.tap.asObservable())
+    ]
+    .forEach { $0.disposed(by: disposeBag) }
   }
 }
 
@@ -72,10 +68,17 @@ extension FeedViewController {
 
 // MARK: - Request
 extension FeedViewController {
-  
+  func requestFleaMarketWriteForm(trigger: Observable<Void>) -> Disposable {
+    trigger
+      .bind { [weak self] in
+        self?.interactor.fetchFleaMarketWriteForm(request: .init())
+      }
+  }
 }
 
 // MARK: - Display
 extension FeedViewController: FeedDisplayLogic {
-
+  func displayFleaMarketWirteForm(viewModel: FeedModels.FleaMarketWriteForm.ViewModel) {
+    router.routeToFleaMarketWriteForm()
+  }
 }

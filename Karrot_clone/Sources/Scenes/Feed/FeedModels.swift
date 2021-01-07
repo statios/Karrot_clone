@@ -7,18 +7,11 @@
 
 enum FeedModels {
 
-  enum Model {
+  enum FleaMarketWriteForm {
+    struct Request {}
 
-    struct Request {
+    struct Response {}
 
-    }
-
-    struct Response {
-
-    }
-
-    struct ViewModel {
-
-    }
+    struct ViewModel {}
   }
 }

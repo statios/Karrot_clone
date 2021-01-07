@@ -13,7 +13,8 @@ protocol FleaMarketWriteFormDataStore: class {
 }
 
 protocol FleaMarketWriteFormBusinessLogic: class {
-
+  func fetchCategory(request: FleaMarketWriteFormModels.Category.Request)
+  func fetchRegion(request: FleaMarketWriteFormModels.Region.Request)
 }
 
 final class FleaMarketWriteFormInteractor: BaseInteractor, FleaMarketWriteFormDataStore {
@@ -25,5 +26,11 @@ final class FleaMarketWriteFormInteractor: BaseInteractor, FleaMarketWriteFormDa
 
 // MARK: - Business Logic
 extension FleaMarketWriteFormInteractor: FleaMarketWriteFormBusinessLogic {
-
+  func fetchCategory(request: FleaMarketWriteFormModels.Category.Request) {
+    presenter.presentCategory(response: .init())
+  }
+  
+  func fetchRegion(request: FleaMarketWriteFormModels.Region.Request) {
+    
+  }
 }

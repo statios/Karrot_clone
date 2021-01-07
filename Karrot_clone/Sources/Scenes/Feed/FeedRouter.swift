@@ -9,7 +9,7 @@ import UIKit
 import Resolver
 
 protocol FeedRoutingLogic: class {
-
+  func routeToFleaMarketWriteForm()
 }
 
 protocol FeedDataPassing: class {
@@ -25,7 +25,27 @@ final class FeedRouter: BaseRouter, FeedDataPassing {
 
 // MARK: - Route
 extension FeedRouter: FeedRoutingLogic {
+  func routeToFleaMarketWriteForm() {
+    
+    guard let destinationVC = Scene.fleaMarketWriteForm.viewController
+            as? FleaMarketWriteFormViewController else { return }
+    
+    var destinationDS = destinationVC.router.dataStore
+    
+    passDataToFleaMarketWriteForm(
+      source: dataStore,
+      destination: &destinationDS
+    )
+    present(to: destinationVC.withNavi(), from: viewController)
+  }
+}
 
+// MARK: - DataPassing
+extension FeedRouter {
+  func passDataToFleaMarketWriteForm(
+    source: FeedDataStore,
+    destination: inout FleaMarketWriteFormDataStore) {
+  }
 }
 
 // MARK: - Register

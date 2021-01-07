@@ -13,7 +13,7 @@ protocol FeedDataStore: class {
 }
 
 protocol FeedBusinessLogic: class {
-
+  func fetchFleaMarketWriteForm(request: FeedModels.FleaMarketWriteForm.Request)
 }
 
 final class FeedInteractor: BaseInteractor, FeedDataStore {
@@ -25,5 +25,7 @@ final class FeedInteractor: BaseInteractor, FeedDataStore {
 
 // MARK: - Business Logic
 extension FeedInteractor: FeedBusinessLogic {
-
+  func fetchFleaMarketWriteForm(request: FeedModels.FleaMarketWriteForm.Request) {
+    presenter.presentFleaMarketWriteForm(response: .init())
+  }
 }
