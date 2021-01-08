@@ -211,11 +211,8 @@ extension FleaMarketWriteFormViewController: ASTableDataSource, ASTableDelegate 
 }
 
 extension FleaMarketWriteFormViewController: FleaMarketPriceInputCellDelegate {
-  func didEndEditing(text: String?) {
-    interactor.fetchInputtedPrice(request: .init(price: text))
-  }
-  
   func textChanged(_ text: String?) {
+    interactor.fetchInputtedPrice(request: .init(price: text))
     currentPrice = text
   }
 }

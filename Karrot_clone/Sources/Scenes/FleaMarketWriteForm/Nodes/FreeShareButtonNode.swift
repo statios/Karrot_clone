@@ -18,21 +18,29 @@ final class FreeShareButtonNode: ASButtonNode {
       string: "무료나눔",
       attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17),
-        NSAttributedString.Key.foregroundColor: UIColor.black
+        NSAttributedString.Key.foregroundColor: UIColor.systemOrange
       ]
     )
+  }
+  
+  override init() {
+    super.init()
+    automaticallyManagesSubnodes = true
+    borderColor = UIColor.systemOrange.cgColor
+    borderWidth = 1
+    cornerRadius = 8
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
     let hStack = ASStackLayoutSpec(
       direction: .horizontal,
-      spacing: 0,
+      spacing: 8,
       justifyContent: .start,
       alignItems: .center,
       children: [textNode, closeImageNode]
     )
     return ASInsetLayoutSpec(
-      insets: .zero,
+      insets: .init(top: 8, left: 8, bottom: 8, right: 8),
       child: hStack
     )
   }

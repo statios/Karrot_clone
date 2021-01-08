@@ -8,7 +8,6 @@
 import AsyncDisplayKit
 
 protocol FleaMarketPriceInputCellDelegate: class {
-  func didEndEditing(text: String?)
   func textChanged(_ text: String?)
 }
 
@@ -19,31 +18,21 @@ final class FleaMarketPriceInputCell: BaseCellNode {
   
   private let textFieldNode = TextFieldNode().then {
     $0.style.preferredSize.height = 40
-    $0.backgroundColor = .red
+    $0.style.preferredSize.width = Device.width - 32
   }
   
   private let separatorNode = ASDisplayNode().then {
     $0.backgroundColor = .lightGray
     $0.style.preferredSize.height = 1
+    $0.style.preferredSize.width = Device.width - 32
   }
   
-  private lazy var freeShareButtonNode = FreeShareButtonNode().then {
-    $0.style.preferredSize.height = 40
-    $0.backgroundColor = .systemOrange
-    $0.cornerRadius = 20
-    $0.borderColor = UIColor.systemOrange.cgColor
-    $0.borderWidth = 1
-  }
+  private lazy var freeShareButtonNode = FreeShareButtonNode()
   
   override func didLoad() {
     super.didLoad()
     textFieldNode.textField?.placeholder = "가격입력"
     textFieldNode.textField?.keyboardType = .numberPad
-    
-    textFieldNode.textField?.rx.controlEvent(.editingDidEnd)
-      .bind { [weak self] in
-        self?.delegate?.didEndEditing(text: self?.textFieldNode.textField?.text)
-      }.disposed(by: disposeBag)
     
     textFieldNode.textField?.rx.text
       .distinctUntilChanged()
@@ -61,23 +50,27 @@ final class FleaMarketPriceInputCell: BaseCellNode {
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-    
     let contentLayout = ASInsetLayoutSpec(
-      insets: .init(top: 8, left: 16, bottom: 8, right: 16),
+      insets: .zero,
       child: isFreeShare ? freeShareButtonNode : textFieldNode
     )
     
     let separatorLayout = ASInsetLayoutSpec(
-      insets: .init(top: 0, left: 16, bottom: 0, right: 16),
+      insets: .zero,
       child: separatorNode
     )
     
-    return  ASStackLayoutSpec(
+    let vStack = ASStackLayoutSpec(
       direction: .vertical,
-      spacing: 0,
+      spacing: 16,
       justifyContent: .start,
       alignItems: .start,
       children: [contentLayout, separatorLayout]
+    )
+    
+    return ASInsetLayoutSpec(
+      insets: .init(top: 16, left: 16, bottom: 0, right: 16),
+      child: vStack
     )
   }
   
