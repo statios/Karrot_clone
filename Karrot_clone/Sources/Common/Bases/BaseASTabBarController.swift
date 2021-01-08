@@ -14,7 +14,7 @@ class BaseAsTabBarController: ASTabBarController {
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nil, bundle: nil)
-    Log.verbose(String(describing: Self.self))
+//    Log.verbose(String(describing: Self.self))
     configure()
   }
   
@@ -23,7 +23,7 @@ class BaseAsTabBarController: ASTabBarController {
   }
   
   deinit {
-    Log.verbose(String(describing: Self.self))
+//    Log.verbose(String(describing: Self.self))
   }
   
   required init?(coder: NSCoder) {
