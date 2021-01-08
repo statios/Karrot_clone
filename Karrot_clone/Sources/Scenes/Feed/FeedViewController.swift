@@ -20,9 +20,10 @@ final class FeedViewController: BaseASViewController {
   @Injected var router: (FeedRoutingLogic & FeedDataPassing)
   
   private let addButtonNode = ASButtonNode().then {
-    $0.backgroundColor = .red
+    $0.backgroundColor = .systemOrange
     $0.style.preferredSize = CGSize(width: 56, height: 56)
     $0.cornerRadius = 28
+    $0.setTitle("╋", with: .boldSystemFont(ofSize: 24), with: .white, for: .normal)
   }
   
 }
@@ -56,10 +57,10 @@ extension FeedViewController {
     
     return ASInsetLayoutSpec(
       insets: .init(
-        top: topHeight + 8,
-        left: 8,
-        bottom: bottomHeight + 8,
-        right: 8
+        top: topHeight + 16,
+        left: 16,
+        bottom: bottomHeight + 16,
+        right: 16
       ),
       child: addButtonNodeLayout
     )

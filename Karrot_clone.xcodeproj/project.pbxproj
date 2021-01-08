@@ -61,12 +61,6 @@
 		F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB8E25A5B132007788AC /* BaseWorker.swift */; };
 		F9E7DB9425A5B139007788AC /* BaseCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9325A5B139007788AC /* BaseCellNode.swift */; };
 		F9E7DB9C25A5B200007788AC /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */; };
-		F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */; };
-		F9E7DBBE25A5B4C2007788AC /* SplashWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */; };
-		F9E7DBBF25A5B4C2007788AC /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */; };
-		F9E7DBC025A5B4C2007788AC /* SplashModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */; };
-		F9E7DBC125A5B4C2007788AC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */; };
-		F9E7DBC225A5B4C2007788AC /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */; };
 		F9E7DBD025A5B615007788AC /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCA25A5B615007788AC /* FeedPresenter.swift */; };
 		F9E7DBD125A5B615007788AC /* FeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCB25A5B615007788AC /* FeedWorker.swift */; };
 		F9E7DBD225A5B615007788AC /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DBCC25A5B615007788AC /* FeedRouter.swift */; };
@@ -164,12 +158,6 @@
 		F9E7DB8E25A5B132007788AC /* BaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
 		F9E7DB9325A5B139007788AC /* BaseCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellNode.swift; sourceTree = "<group>"; };
 		F9E7DB9B25A5B200007788AC /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
-		F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
-		F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWorker.swift; sourceTree = "<group>"; };
-		F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
-		F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModels.swift; sourceTree = "<group>"; };
-		F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		F9E7DBCA25A5B615007788AC /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		F9E7DBCB25A5B615007788AC /* FeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorker.swift; sourceTree = "<group>"; };
 		F9E7DBCC25A5B615007788AC /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
@@ -310,6 +298,21 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		F9B02BD725A8DAC00098F91E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F9B02BD825A8DAC70098F91E /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F9B02BD825A8DAC70098F91E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		F9E7DAB525A5A990007788AC = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +347,7 @@
 		F9E7DAD725A5A991007788AC /* Karrot_cloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				F9B02BD725A8DAC00098F91E /* Sources */,
 				F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */,
 				F9E7DADA25A5A991007788AC /* Info.plist */,
 			);
@@ -436,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				F9B02B3625A734AA0098F91E /* Scene.swift */,
-				F9E7DBA125A5B3A4007788AC /* Splash */,
 				F9E7DBC925A5B606007788AC /* Feed */,
 				F9E7DC0725A5F7E4007788AC /* FleaMarketWriteForm */,
 				F9B02B6E25A747560098F91E /* Category */,
@@ -516,19 +519,6 @@
 			children = (
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		F9E7DBA125A5B3A4007788AC /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				F9E7DBBB25A5B4C2007788AC /* SplashViewController.swift */,
-				F9E7DBBC25A5B4C2007788AC /* SplashInteractor.swift */,
-				F9E7DBB725A5B4C2007788AC /* SplashPresenter.swift */,
-				F9E7DBB825A5B4C2007788AC /* SplashWorker.swift */,
-				F9E7DBB925A5B4C2007788AC /* SplashRouter.swift */,
-				F9E7DBBA25A5B4C2007788AC /* SplashModels.swift */,
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		F9E7DBC925A5B606007788AC /* Feed */ = {
@@ -800,10 +790,8 @@
 				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
 				F9B02B8D25A750AC0098F91E /* RegionRouter.swift in Sources */,
 				F9E7DBD225A5B615007788AC /* FeedRouter.swift in Sources */,
-				F9E7DBBE25A5B4C2007788AC /* SplashWorker.swift in Sources */,
 				F9E7DC1C25A5F842007788AC /* FleaMarketWriteFormModels.swift in Sources */,
 				F9E7DBD325A5B615007788AC /* FeedModels.swift in Sources */,
-				F9E7DBC125A5B4C2007788AC /* SplashViewController.swift in Sources */,
 				F9B02B7825A747630098F91E /* CategoryModels.swift in Sources */,
 				F9B02B7925A747630098F91E /* CategoryViewController.swift in Sources */,
 				F9B02BA625A75CA60098F91E /* FleaMarketArticle.swift in Sources */,
@@ -825,15 +813,12 @@
 				F9E7DB8F25A5B132007788AC /* BaseWorker.swift in Sources */,
 				F9E7DC1925A5F842007788AC /* FleaMarketWriteFormPresenter.swift in Sources */,
 				F9E7DC3525A5FF78007788AC /* FleaMarketSelectionCell.swift in Sources */,
-				F9E7DBBF25A5B4C2007788AC /* SplashRouter.swift in Sources */,
 				F9E7DB6C25A5B103007788AC /* BaseASViewController.swift in Sources */,
-				F9E7DBC225A5B4C2007788AC /* SplashInteractor.swift in Sources */,
 				F9E7DC3D25A5FFD7007788AC /* FleaMarketPriceInputCell.swift in Sources */,
 				F9B02B3725A734AA0098F91E /* Scene.swift in Sources */,
 				F9B02BB325A76FE10098F91E /* SelectionCell.swift in Sources */,
 				F9E7DBD025A5B615007788AC /* FeedPresenter.swift in Sources */,
 				F9B02B9025A750AC0098F91E /* RegionInteractor.swift in Sources */,
-				F9E7DBC025A5B4C2007788AC /* SplashModels.swift in Sources */,
 				F9B02BAB25A761100098F91E /* UIViewController+Rx.swift in Sources */,
 				F9E7DC1B25A5F842007788AC /* FleaMarketWriteFormRouter.swift in Sources */,
 				F9B02B7525A747630098F91E /* CategoryPresenter.swift in Sources */,
@@ -850,7 +835,6 @@
 				F9A7A5EA25A6BCD4004CFA9E /* Device.swift in Sources */,
 				F9B02BBC25A7705B0098F91E /* CategorySelectionCell.swift in Sources */,
 				F9E7DC4225A5FFE7007788AC /* FleaMarketContentFieldCell.swift in Sources */,
-				F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */,
 				F9B02BC825A842510098F91E /* RegionSelectionCell.swift in Sources */,
 				F9E7DC0125A5BECB007788AC /* ASControlNode.swift in Sources */,
 				F9B02B8B25A750AC0098F91E /* RegionPresenter.swift in Sources */,

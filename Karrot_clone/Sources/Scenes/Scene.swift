@@ -10,7 +10,6 @@ import UIKit
 
 enum Scene {
   case empty
-  case splash
   case main
   case feed
   case fleaMarketWriteForm
@@ -24,8 +23,6 @@ extension Scene {
     switch self {
     case .empty:
       viewController = BaseASViewController()
-    case .splash:
-      viewController = SplashViewController()
     case .main:
       let tabBarController = BaseAsTabBarController()
       let feedViewController = BaseASNavigationController(rootViewController: Scene.feed.viewController)
