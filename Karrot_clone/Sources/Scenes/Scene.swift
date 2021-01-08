@@ -15,6 +15,7 @@ enum Scene {
   case feed
   case fleaMarketWriteForm
   case category
+  case region
 }
 
 extension Scene {
@@ -36,6 +37,8 @@ extension Scene {
       viewController = FleaMarketWriteFormViewController()
     case .category:
       viewController = CategoryViewController()
+    case .region:
+      viewController = RegionViewController()
     }
     viewController.title = title
     viewController.modalTransitionStyle = transitionStyle

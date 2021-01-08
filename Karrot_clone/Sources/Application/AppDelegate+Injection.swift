@@ -13,6 +13,7 @@ extension Resolver: ResolverRegistering {
     FeedRouter.registerAllServices()
     FleaMarketWriteFormRouter.registerAllServices()
     CategoryRouter.registerAllServices()
+    RegionRouter.registerAllServices()
   }
 }
 

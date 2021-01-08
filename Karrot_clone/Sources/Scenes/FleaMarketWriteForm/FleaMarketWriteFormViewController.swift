@@ -11,7 +11,9 @@ import RxSwift
 import RxCocoa
 
 protocol FleaMarketWriteFormDisplayLogic: class {
-  func displayCategory(viewModel: FleaMarketWriteFormModels.Category.ViewModel)
+  func displayCategoryScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
+  func displayRegionScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
+  func displaySelectedCategory(viewModel: FleaMarketWriteFormModels.SelectedCategory.ViewModel)
 }
 
 final class FleaMarketWriteFormViewController: BaseASViewController {
@@ -20,14 +22,17 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
   @Injected var router: (FleaMarketWriteFormRoutingLogic & FleaMarketWriteFormDataPassing)
   
   private let fleaMarketCellKinds = FleaMarketCellKind.allCases
+  
   private let closeButton = UIButton().then {
     $0.setTitle("닫기", for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
+  
   private let applyButton = UIButton().then {
     $0.setTitle("제출", for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
+  
   private lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
     $0.delegate = self
@@ -35,6 +40,7 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
     $0.view.isScrollEnabled = true
     $0.view.separatorStyle = .none
   }
+  
   var keyboardHeight: CGFloat = 0
 }
 
@@ -46,6 +52,11 @@ extension FleaMarketWriteFormViewController {
           let presenter = interactor.presenter as? FleaMarketWriteFormPresenter else { return }
     router.viewController = self
     presenter.viewController = self
+    
+    [
+      requestSelectedCategory(trigger: rx.viewWillAppear.asObservableVoid())
+    ]
+    .forEach { $0.disposed(by: disposeBag) }
   }
 }
 
@@ -82,13 +93,29 @@ extension FleaMarketWriteFormViewController {
 
 // MARK: - Request
 extension FleaMarketWriteFormViewController {
-  
+  func requestSelectedCategory(trigger: Observable<Void>) -> Disposable {
+    trigger
+      .bind { [weak self] in
+        self?.interactor.fetchSelectedCategory(request: .init())
+      }
+  }
 }
 
 // MARK: - Display
 extension FleaMarketWriteFormViewController: FleaMarketWriteFormDisplayLogic {
-  func displayCategory(viewModel: FleaMarketWriteFormModels.Category.ViewModel) {
+  func displayCategoryScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel) {
     router.routeToCategory()
+  }
+  
+  func displayRegionScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel) {
+    router.routeToRegion()
+  }
+  
+  func displaySelectedCategory(viewModel: FleaMarketWriteFormModels.SelectedCategory.ViewModel) {
+    let row = fleaMarketCellKinds.enumerated().first { $0.element == .category }.map { $0.offset }
+    let indexPath = IndexPath(row: row ?? 0, section: 0)
+    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketSelectionCell
+    cell?.configure(title: viewModel.categoryName)
   }
 }
 
@@ -122,9 +149,8 @@ extension FleaMarketWriteFormViewController: ASTableDataSource, ASTableDelegate 
   
   func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
     switch fleaMarketCellKinds[indexPath.row] {
-    case .category: interactor.fetchCategory(request: .init())
-    case .region:
-      Log.error("")
+    case .category: interactor.fetchCategoryScene(request: .init())
+    case .region: interactor.fetchRegionScene(request: .init())
     default:
       return
     }

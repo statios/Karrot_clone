@@ -7,15 +7,25 @@
 
 enum FleaMarketWriteFormModels {
 
-  enum Category {
+  enum CategoryScene {
     struct Request {}
     struct Response {}
     struct ViewModel {}
   }
   
-  enum Region {
+  enum RegionScene {
     struct Request {}
     struct Response {}
     struct ViewModel {}
+  }
+  
+  enum SelectedCategory {
+    struct Request {}
+    struct Response {
+      let selectedCategory: ArticleCategory
+    }
+    struct ViewModel {
+      let categoryName: String
+    }
   }
 }

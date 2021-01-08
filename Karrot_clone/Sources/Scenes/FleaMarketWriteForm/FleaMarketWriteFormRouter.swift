@@ -10,6 +10,7 @@ import Resolver
 
 protocol FleaMarketWriteFormRoutingLogic: class {
   func routeToCategory()
+  func routeToRegion()
 }
 
 protocol FleaMarketWriteFormDataPassing: class {
@@ -28,11 +29,18 @@ extension FleaMarketWriteFormRouter: FleaMarketWriteFormRoutingLogic {
   func routeToCategory() {
     guard let destinationVC = Scene.category.viewController
             as? CategoryViewController else { return }
-    
     var destinationDS = destinationVC.router.dataStore
     
     passDataToCategory(source: dataStore, destination: &destinationDS)
+    push(to: destinationVC, from: viewController)
+  }
+  
+  func routeToRegion() {
+    guard let destinationVC = Scene.region.viewController
+            as? RegionViewController else { return }
+    var destinationDS = destinationVC.router.dataStore
     
+    passDataToRegion(source: dataStore, destination: &destinationDS)
     push(to: destinationVC, from: viewController)
   }
 }
@@ -42,6 +50,13 @@ extension FleaMarketWriteFormRouter {
   func passDataToCategory(
     source: FleaMarketWriteFormDataStore,
     destination: inout CategoryDataStore
+  ) {
+    //pass data here
+  }
+  
+  func passDataToRegion(
+    source: FleaMarketWriteFormDataStore,
+    destination: inout RegionDataStore
   ) {
     //pass data here
   }
