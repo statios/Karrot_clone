@@ -33,14 +33,14 @@ extension CategoryRouter: CategoryRoutingLogic {
             as? FleaMarketWriteFormViewController else { return }
     var destinationDS = destinationVC.router.dataStore
     
-    passDataToRegion(source: dataStore, destination: &destinationDS)
+    passDataToFleaMarketWriteForm(source: dataStore, destination: &destinationDS)
     pop(from: viewController)
   }
 }
 
 // MARK: - DataPassing
 extension CategoryRouter {
-  func passDataToRegion(
+  func passDataToFleaMarketWriteForm(
     source: CategoryDataStore,
     destination: inout FleaMarketWriteFormDataStore
   ) {

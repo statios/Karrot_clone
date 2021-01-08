@@ -9,7 +9,7 @@ import UIKit
 import Resolver
 
 protocol RegionRoutingLogic: class {
-
+  func routeToFleaMarketWriteForm()
 }
 
 protocol RegionDataPassing: class {
@@ -25,7 +25,27 @@ final class RegionRouter: BaseRouter, RegionDataPassing {
 
 // MARK: - Route
 extension RegionRouter: RegionRoutingLogic {
+  func routeToFleaMarketWriteForm() {
+    guard let destinationVC = viewController?
+            .navigationController?
+            .viewControllers
+            .first(where: { $0.isKind(of: FleaMarketWriteFormViewController.self) })
+            as? FleaMarketWriteFormViewController else { return }
+    var destinationDS = destinationVC.router.dataStore
+    
+    passDataToFleaMarketWriteForm(source: dataStore, destination: &destinationDS)
+    pop(from: viewController)
+  }
+}
 
+// MARK: - DataPassing
+extension RegionRouter {
+  func passDataToFleaMarketWriteForm(
+    source: RegionDataStore,
+    destination: inout FleaMarketWriteFormDataStore
+  ) {
+    destination.selectedRegion = source.selectedRegion
+  }
 }
 
 // MARK: - Register
@@ -39,5 +59,7 @@ extension RegionRouter: ResolverRegistering {
       .implements((RegionRoutingLogic & RegionDataPassing).self)
     Resolver.register { RegionPresenter() }
       .implements(RegionPresentationLogic.self)
+    Resolver.register { RegionWorker() }
+      .implements(RegionWorkerLogic.self)
   }
 }

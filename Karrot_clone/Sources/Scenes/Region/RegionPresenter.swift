@@ -8,7 +8,8 @@
 import UIKit
 
 protocol RegionPresentationLogic: class {
-  
+  func presentRegions(response: RegionModels.Regions.Response)
+  func presentSelectRegion(response: RegionModels.SelectRegion.Response)
 }
 
 final class RegionPresenter: BasePresenter {
@@ -19,5 +20,11 @@ final class RegionPresenter: BasePresenter {
 
 // MARK: - Present
 extension RegionPresenter: RegionPresentationLogic {
+  func presentRegions(response: RegionModels.Regions.Response) {
+    viewController?.displayRegions(viewModel: .init(regions: response.result))
+  }
   
+  func presentSelectRegion(response: RegionModels.SelectRegion.Response) {
+    viewController?.displaySelectRegion(viewModel: .init())
+  }
 }

@@ -14,6 +14,9 @@ protocol FleaMarketWriteFormDisplayLogic: class {
   func displayCategoryScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
   func displayRegionScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
   func displaySelectedCategory(viewModel: FleaMarketWriteFormModels.SelectedCategory.ViewModel)
+  func displaySelectedRegion(viewModel: FleaMarketWriteFormModels.SelectedRegion.ViewModel)
+  func displayInputtedPrice(viewModel: FleaMarketWriteFormModels.InputtedPrice.ViewModel)
+  func displaySubmitArticle(viewModel: FleaMarketWriteFormModels.SubmitArticle.ViewModel)
 }
 
 final class FleaMarketWriteFormViewController: BaseASViewController {
@@ -28,7 +31,7 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
     $0.setTitleColor(.systemBlue, for: .normal)
   }
   
-  private let applyButton = UIButton().then {
+  private let submitButton = UIButton().then {
     $0.setTitle("제출", for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
@@ -41,7 +44,9 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
     $0.view.separatorStyle = .none
   }
   
-  var keyboardHeight: CGFloat = 0
+  private var keyboardHeight: CGFloat = 0
+  private var currentPrice: String? = nil
+  private var currentContent: String? = nil
 }
 
 // MARK: - Configure
@@ -54,7 +59,9 @@ extension FleaMarketWriteFormViewController {
     presenter.viewController = self
     
     [
-      requestSelectedCategory(trigger: rx.viewWillAppear.asObservableVoid())
+      requestSelectedCategory(trigger: rx.viewWillAppear.asObservableVoid()),
+      requestSelectedRegion(trigger: rx.viewWillAppear.asObservableVoid()),
+      requestSubmitArticle(trigger: submitButton.rx.tap.asObservable())
     ]
     .forEach { $0.disposed(by: disposeBag) }
   }
@@ -65,7 +72,7 @@ extension FleaMarketWriteFormViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.leftBarButtonItem = closeButton.asBarButtonItem()
-    navigationItem.rightBarButtonItem = applyButton.asBarButtonItem()
+    navigationItem.rightBarButtonItem = submitButton.asBarButtonItem()
     
     closeButton.rx.tap
       .bind { [weak self] in
@@ -99,6 +106,25 @@ extension FleaMarketWriteFormViewController {
         self?.interactor.fetchSelectedCategory(request: .init())
       }
   }
+  
+  func requestSelectedRegion(trigger: Observable<Void>) -> Disposable {
+    trigger
+      .bind { [weak self] in
+        self?.interactor.fetchSelectedRegion(request: .init())
+      }
+  }
+  
+  func requestSubmitArticle(trigger: Observable<Void>) -> Disposable {
+    trigger
+      .bind { [weak self] in
+        self?.interactor.fetchSubmitArticle(
+          request: .init(
+            price: self?.currentContent,
+            content: self?.currentContent
+          )
+        )
+      }
+  }
 }
 
 // MARK: - Display
@@ -116,6 +142,31 @@ extension FleaMarketWriteFormViewController: FleaMarketWriteFormDisplayLogic {
     let indexPath = IndexPath(row: row ?? 0, section: 0)
     let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketSelectionCell
     cell?.configure(title: viewModel.categoryName)
+  }
+  
+  func displaySelectedRegion(viewModel: FleaMarketWriteFormModels.SelectedRegion.ViewModel) {
+    let row = fleaMarketCellKinds.enumerated().first { $0.element == .region }.map { $0.offset }
+    let indexPath = IndexPath(row: row ?? 1, section: 0)
+    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketSelectionCell
+    cell?.configure(title: viewModel.regionName)
+  }
+  
+  func displayInputtedPrice(viewModel: FleaMarketWriteFormModels.InputtedPrice.ViewModel) {
+    let row = fleaMarketCellKinds.enumerated().first { $0.element == .price }.map { $0.offset }
+    let indexPath = IndexPath(row: row ?? 2, section: 0)
+    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketPriceInputCell
+    cell?.configure(viewModel.price)
+  }
+  
+  func displaySubmitArticle(viewModel: FleaMarketWriteFormModels.SubmitArticle.ViewModel) {
+    showAlert(
+      title: viewModel.title,
+      message: viewModel.errorMessage,
+      button: "확인"
+    ) { [weak self] _ in
+      guard viewModel.isSuccess else { return }
+      self?.dismiss(animated: true)
+    }
   }
 }
 
@@ -138,7 +189,9 @@ extension FleaMarketWriteFormViewController: ASTableDataSource, ASTableDelegate 
         cell.configure(title: "게시글 보여줄 동네 고르기")
         return cell
       case .price:
-        return FleaMarketPriceInputCell()
+        let cell = FleaMarketPriceInputCell()
+        cell.delegate = self
+        return cell
       case .content:
         let cell = FleaMarketContentFieldCell()
         cell.delegate = self
@@ -157,6 +210,16 @@ extension FleaMarketWriteFormViewController: ASTableDataSource, ASTableDelegate 
   }
 }
 
+extension FleaMarketWriteFormViewController: FleaMarketPriceInputCellDelegate {
+  func didEndEditing(text: String?) {
+    interactor.fetchInputtedPrice(request: .init(price: text))
+  }
+  
+  func textChanged(_ text: String?) {
+    currentPrice = text
+  }
+}
+
 extension FleaMarketWriteFormViewController: FleaMarketContentFieldCellDelegate {
   func chagnedTextViewLineOfNumbers() {
     tableNode.scrollToRow(
@@ -164,5 +227,9 @@ extension FleaMarketWriteFormViewController: FleaMarketContentFieldCellDelegate 
       at: .bottom,
       animated: true
     )
+  }
+  
+  func textChanged(_ textView: UITextView, _ text: String?) {
+    currentContent = text
   }
 }

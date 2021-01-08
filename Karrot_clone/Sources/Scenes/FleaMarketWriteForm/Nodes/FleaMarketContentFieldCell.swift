@@ -9,6 +9,7 @@ import AsyncDisplayKit
 
 protocol FleaMarketContentFieldCellDelegate: class {
   func chagnedTextViewLineOfNumbers()
+  func textChanged(_ textView: UITextView, _ text: String?)
 }
 
 final class FleaMarketContentFieldCell: BaseCellNode {
@@ -21,10 +22,9 @@ final class FleaMarketContentFieldCell: BaseCellNode {
     $0.typingAttributes = [
       NSAttributedString.Key.font.rawValue: UIFont.systemFont(ofSize: 17)
     ]
-    $0.backgroundColor = .red
     $0.delegate = self
     $0.attributedPlaceholderText = NSAttributedString(
-      string: "방이동에 올릴 게시글 내용을 작성해주세요.(가품 및 판매금지품목은 게시가 제한될 수 있어요.",
+      string: "내용을 입력하세요.\n\n\n\n\n",
       attributes: [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17),
         NSAttributedString.Key.foregroundColor: UIColor.lightGray
@@ -39,15 +39,17 @@ final class FleaMarketContentFieldCell: BaseCellNode {
     textViewNode.textView.sizeToFit()
     
     textViewNode.textView.rx.text
-      .bind { [weak self] _ in
-        self?.setNeedsLayout()
-      }.disposed(by: disposeBag)
-    
-    textViewNode.textView.rx.text
       .compactMap { [weak self] _ in self?.textViewNode.numberOfLines }
       .withPrevious(startWith: 1).filter { $0 != $1 }
       .bind { [weak self] (_, _) in
+        self?.setNeedsLayout()
         self?.delegate?.chagnedTextViewLineOfNumbers()
+      }.disposed(by: disposeBag)
+    
+    textViewNode.textView.rx.text
+      .bind { [weak self] in
+        guard let `self` = self else { return }
+        self.delegate?.textChanged(self.textViewNode.textView, $0)
       }.disposed(by: disposeBag)
   }
   

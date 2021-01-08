@@ -28,4 +28,41 @@ enum FleaMarketWriteFormModels {
       let categoryName: String
     }
   }
+  
+  enum SelectedRegion {
+    struct Request {}
+    struct Response {
+      let selectedRegion: Region
+    }
+    struct ViewModel {
+      let regionName: String
+    }
+  }
+  
+  enum InputtedPrice {
+    struct Request {
+      let price: String?
+    }
+    struct Response {
+      let price: Int
+    }
+    struct ViewModel {
+      let price: Int
+    }
+  }
+  
+  enum SubmitArticle {
+    struct Request {
+      let price: String?
+      let content: String?
+    }
+    struct Response {
+      let fleaMarketArticle: FleaMarketArticle
+    }
+    struct ViewModel {
+      let isSuccess: Bool
+      let title: String
+      let errorMessage: String?
+    }
+  }
 }

@@ -32,6 +32,8 @@
 		F9B02BAB25A761100098F91E /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BAA25A761100098F91E /* UIViewController+Rx.swift */; };
 		F9B02BB325A76FE10098F91E /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BB225A76FE10098F91E /* SelectionCell.swift */; };
 		F9B02BBC25A7705B0098F91E /* CategorySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BBB25A7705B0098F91E /* CategorySelectionCell.swift */; };
+		F9B02BC825A842510098F91E /* RegionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BC725A842510098F91E /* RegionSelectionCell.swift */; };
+		F9B02BD025A87F650098F91E /* FreeShareButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BCF25A87F650098F91E /* FreeShareButtonNode.swift */; };
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
 		F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Image.xcassets */; };
 		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
@@ -134,6 +136,8 @@
 		F9B02BAA25A761100098F91E /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		F9B02BB225A76FE10098F91E /* SelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
 		F9B02BBB25A7705B0098F91E /* CategorySelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionCell.swift; sourceTree = "<group>"; };
+		F9B02BC725A842510098F91E /* RegionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionCell.swift; sourceTree = "<group>"; };
+		F9B02BCF25A87F650098F91E /* FreeShareButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeShareButtonNode.swift; sourceTree = "<group>"; };
 		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E7DACA25A5A991007788AC /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -269,12 +273,13 @@
 		F9B02B8425A7508B0098F91E /* Region */ = {
 			isa = PBXGroup;
 			children = (
+				F9B02B8925A750AC0098F91E /* RegionViewController.swift */,
+				F9B02B8A25A750AC0098F91E /* RegionInteractor.swift */,
 				F9B02B8525A750AC0098F91E /* RegionPresenter.swift */,
 				F9B02B8625A750AC0098F91E /* RegionWorker.swift */,
 				F9B02B8725A750AC0098F91E /* RegionRouter.swift */,
 				F9B02B8825A750AC0098F91E /* RegionModels.swift */,
-				F9B02B8925A750AC0098F91E /* RegionViewController.swift */,
-				F9B02B8A25A750AC0098F91E /* RegionInteractor.swift */,
+				F9B02BC625A842480098F91E /* Nodes */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -293,6 +298,14 @@
 			isa = PBXGroup;
 			children = (
 				F9B02BBB25A7705B0098F91E /* CategorySelectionCell.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F9B02BC625A842480098F91E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F9B02BC725A842510098F91E /* RegionSelectionCell.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -582,6 +595,7 @@
 				F9E7DC3425A5FF78007788AC /* FleaMarketSelectionCell.swift */,
 				F9E7DC3C25A5FFD7007788AC /* FleaMarketPriceInputCell.swift */,
 				F9E7DC4125A5FFE7007788AC /* FleaMarketContentFieldCell.swift */,
+				F9B02BCF25A87F650098F91E /* FreeShareButtonNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -829,6 +843,7 @@
 				F9E7DB8025A5B121007788AC /* BaseNode.swift in Sources */,
 				F9E7DC1A25A5F842007788AC /* FleaMarketWriteFormWorker.swift in Sources */,
 				F9E7DC5125A60B6B007788AC /* FleaMarketCellKind.swift in Sources */,
+				F9B02BD025A87F650098F91E /* FreeShareButtonNode.swift in Sources */,
 				F9E7DBF425A5BDC8007788AC /* ASRxTarget.swift in Sources */,
 				F9B02B9925A75C8A0098F91E /* ArticleCategory.swift in Sources */,
 				F9E7DBEF25A5BDA7007788AC /* ASControlTarget.swift in Sources */,
@@ -836,6 +851,7 @@
 				F9B02BBC25A7705B0098F91E /* CategorySelectionCell.swift in Sources */,
 				F9E7DC4225A5FFE7007788AC /* FleaMarketContentFieldCell.swift in Sources */,
 				F9E7DBBD25A5B4C2007788AC /* SplashPresenter.swift in Sources */,
+				F9B02BC825A842510098F91E /* RegionSelectionCell.swift in Sources */,
 				F9E7DC0125A5BECB007788AC /* ASControlNode.swift in Sources */,
 				F9B02B8B25A750AC0098F91E /* RegionPresenter.swift in Sources */,
 				F9E7DC4825A60265007788AC /* TextFieldNode.swift in Sources */,

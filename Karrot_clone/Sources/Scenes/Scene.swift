@@ -48,8 +48,7 @@ extension Scene {
   
   var title: String? {
     switch self {
-    case .splash: return "Splash"
-    case .feed: return "Home"
+    case .feed: return "Feed"
     case .fleaMarketWriteForm: return "중고거래 글쓰기"
     default: return nil
     }
