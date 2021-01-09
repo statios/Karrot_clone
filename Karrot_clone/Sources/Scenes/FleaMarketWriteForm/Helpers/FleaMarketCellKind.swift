@@ -29,4 +29,13 @@ extension FleaMarketCellKind {
     case .content: return FleaMarketContentFieldCell()
     }
   }
+  
+  var errorMessage: String? {
+    switch self {
+    case .category: return "- 카테고리를 선택해주세요."
+    case .region: return "- 동네를 선택해주세요."
+    case .price: return nil
+    case .content: return "- 내용을 입력해주세요."
+    }
+  }
 }

@@ -19,6 +19,10 @@ final class FleaMarketWriteFormPresenterTests: XCTestCase {
     var isCalledDisplayCategoryScene = false
     var isCalledDisplayRegionScene = false
     var isCalledDisplaySelectedCategory = false
+    var isCalledDisplaySelectedRegion = false
+    var isCalledDisplayInputtedPrice = false
+    var isCalledDisplaySubmitArticle = false
+    var errorMessageFromSubmittedArticle: String?
     
     func displayCategoryScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel) {
       isCalledDisplayCategoryScene = true
@@ -33,15 +37,16 @@ final class FleaMarketWriteFormPresenterTests: XCTestCase {
     }
 
     func displaySelectedRegion(viewModel: FleaMarketWriteFormModels.SelectedRegion.ViewModel) {
-      
+      isCalledDisplaySelectedRegion = true
     }
 
     func displayInputtedPrice(viewModel: FleaMarketWriteFormModels.InputtedPrice.ViewModel) {
-      
+      isCalledDisplayInputtedPrice = true
     }
 
     func displaySubmitArticle(viewModel: FleaMarketWriteFormModels.SubmitArticle.ViewModel) {
-      
+      isCalledDisplaySubmitArticle = true
+      errorMessageFromSubmittedArticle = viewModel.errorMessage
     }
   }
 
@@ -94,5 +99,61 @@ extension FleaMarketWriteFormPresenterTests {
     
     // then
     XCTAssert(display.isCalledDisplaySelectedCategory, "CalledDisplaySelectedCategory")
+  }
+  
+  func test_callingDisplaySelectedRegion() {
+    // given
+    let dummyRegion = Seeds.region
+    
+    // when
+    presenter.presentSelectedRegion(response: .init(selectedRegion: dummyRegion))
+    
+    // then
+    XCTAssert(display.isCalledDisplaySelectedRegion, "CalledDisplaySelectedRegion")
+  }
+  
+  func test_callingDisplayInputtedPrice() {
+    // given
+    let dummyPrice = 10000
+    
+    // when
+    presenter.presentInputtedPrice(response: .init(price: dummyPrice))
+    
+    // then
+    XCTAssert(display.isCalledDisplayInputtedPrice)
+  }
+  
+  func test_callingDisplaySubmitArticle() {
+    // given
+    let dummyArticle = Seeds.fleaMarketArticle
+    
+    // when
+    presenter.presentSubmitArticle(response: .init(fleaMarketArticle: dummyArticle))
+    
+    // then
+    XCTAssert(display.isCalledDisplaySubmitArticle)
+  }
+  
+  func test_errorMessageFromSubmittedArticle() {
+    // given
+    var articleWithoutCategory = Seeds.fleaMarketArticle
+    var articleWithoutRegion = Seeds.fleaMarketArticle
+    var articleWithoutPrice = Seeds.fleaMarketArticle
+    var articleWithoutContent = Seeds.fleaMarketArticle
+    articleWithoutCategory.categoryID = nil
+    articleWithoutRegion.regionID = nil
+    articleWithoutPrice.price = nil
+    articleWithoutContent.content = nil
+    let cellKinds = FleaMarketCellKind.allCases
+    
+    [articleWithoutCategory, articleWithoutRegion, articleWithoutPrice, articleWithoutContent]
+      .enumerated()
+      .forEach {
+        // when
+        presenter.presentSubmitArticle(response: .init(fleaMarketArticle: $0.element))
+        
+        // then
+        XCTAssert(display.errorMessageFromSubmittedArticle == cellKinds[$0.offset].errorMessage)
+      }
   }
 }

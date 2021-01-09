@@ -40,6 +40,7 @@
 		F9B02C3725A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */; };
 		F9B02C4025A982800098F91E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = F9B02C3F25A982800098F91E /* Nimble */; };
 		F9B02C4925AA12FD0098F91E /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C4825AA12FD0098F91E /* Seeds.swift */; };
+		F9B02C5125AA41090098F91E /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C5025AA41090098F91E /* Text.swift */; };
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
 		F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Image.xcassets */; };
 		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
@@ -141,6 +142,7 @@
 		F9B02C3225A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormWorkerTests.swift; sourceTree = "<group>"; };
 		F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormPresenterTests.swift; sourceTree = "<group>"; };
 		F9B02C4825AA12FD0098F91E /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
+		F9B02C5025AA41090098F91E /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E7DACA25A5A991007788AC /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			children = (
 				F9E7DC2625A5FAAC007788AC /* Image.swift */,
 				F9A7A5E925A6BCD4004CFA9E /* Device.swift */,
+				F9B02C5025AA41090098F91E /* Text.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				F9E7DBD125A5B615007788AC /* FeedWorker.swift in Sources */,
 				F9E7DC2C25A5FC00007788AC /* UIView+.swift in Sources */,
 				F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */,
+				F9B02C5125AA41090098F91E /* Text.swift in Sources */,
 				F9B02B8D25A750AC0098F91E /* RegionRouter.swift in Sources */,
 				F9E7DBD225A5B615007788AC /* FeedRouter.swift in Sources */,
 				F9E7DC1C25A5F842007788AC /* FleaMarketWriteFormModels.swift in Sources */,

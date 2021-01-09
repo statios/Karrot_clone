@@ -53,21 +53,7 @@ extension FleaMarketWriteFormPresenter: FleaMarketWriteFormPresentationLogic {
   }
   
   func presentSubmitArticle(response: FleaMarketWriteFormModels.SubmitArticle.Response) {
-    var errorMessages: [String] = []
-    
-    if response.fleaMarketArticle.categoryID == nil {
-      errorMessages.append("- 카테고리를 선택해주세요.")
-    }
-    
-    if response.fleaMarketArticle.regionID == nil {
-      errorMessages.append("- 동네를 선택해주세요.")
-    }
-    
-    if response.fleaMarketArticle.content?.isEmpty ?? true {
-      errorMessages.append("- 내용을 입력해주세요.")
-    }
-    
-    let message: String? = errorMessages.isEmpty ? nil : errorMessages.joined(separator: "\n")
+    let message: String? = createErrorMessage(from: response.fleaMarketArticle)
     let isSuccess = message == nil
     let title = isSuccess ? "성공" : "실패"
     
@@ -78,5 +64,30 @@ extension FleaMarketWriteFormPresenter: FleaMarketWriteFormPresentationLogic {
         errorMessage: message
       )
     )
+  }
+}
+
+// MARK: - Helpers
+extension FleaMarketWriteFormPresenter {
+  func createErrorMessage(from submitted: FleaMarketArticle) -> String? {
+    var errorMessages: [String?] = []
+    
+    if submitted.categoryID == nil {
+      errorMessages.append(FleaMarketCellKind.category.errorMessage)
+    }
+    
+    if submitted.regionID == nil {
+      errorMessages.append(FleaMarketCellKind.region.errorMessage)
+    }
+    
+    if submitted.content?.isEmpty ?? true {
+      errorMessages.append(FleaMarketCellKind.content.errorMessage)
+    }
+    
+    let message: String? = errorMessages.isEmpty
+      ? nil
+      : errorMessages.compactMap { $0 }.joined(separator: "\n")
+    
+    return message
   }
 }

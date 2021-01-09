@@ -19,6 +19,9 @@ final class FleaMarketWriteFormInteractorTests: XCTestCase {
     var isCalledPresentCategoryScene = false
     var isCalledPresentRegionScene = false
     var isCalledPresentSelectedCategory = false
+    var isCalledPresentSelectedRegion = false
+    var isCalledPresentInputtedPrice = false
+    var isCalledPresentSubmitArticle = false
     
     func presentCategoryScene(response: FleaMarketWriteFormModels.CategoryScene.Response) {
       isCalledPresentCategoryScene = true
@@ -33,15 +36,15 @@ final class FleaMarketWriteFormInteractorTests: XCTestCase {
     }
     
     func presentSelectedRegion(response: FleaMarketWriteFormModels.SelectedRegion.Response) {
-      
+      isCalledPresentSelectedRegion = true
     }
     
     func presentInputtedPrice(response: FleaMarketWriteFormModels.InputtedPrice.Response) {
-      
+      isCalledPresentInputtedPrice = true
     }
     
     func presentSubmitArticle(response: FleaMarketWriteFormModels.SubmitArticle.Response) {
-      
+      isCalledPresentSubmitArticle = true
     }
   }
 
@@ -70,7 +73,7 @@ extension FleaMarketWriteFormInteractorTests {
     interactor.fetchCategoryScene(request: dummyReqeust)
 
     // then
-    XCTAssert(presenter.isCalledPresentCategoryScene, "CalledPresentCategoryScene")
+    XCTAssert(presenter.isCalledPresentCategoryScene)
   }
   
   func test_callingPresentRegionScene() {
@@ -81,7 +84,7 @@ extension FleaMarketWriteFormInteractorTests {
     interactor.fetchRegionScene(request: dummyReqeust)
     
     // then
-    XCTAssert(presenter.isCalledPresentRegionScene, "CalledPresentRegionScene")
+    XCTAssert(presenter.isCalledPresentRegionScene)
   }
   
   func test_callingPresentSelectedCategoryWhenSelectedCategoryIsNotNil() {
@@ -92,7 +95,7 @@ extension FleaMarketWriteFormInteractorTests {
     interactor.fetchSelectedCategory(request: .init())
     
     // then
-    XCTAssert(presenter.isCalledPresentSelectedCategory, "CalledPresentSelectedCategory")
+    XCTAssert(presenter.isCalledPresentSelectedCategory)
   }
   
   func test_notCallingPresentSelectedCategoryWhenSelectedCategoryIsNil() {
@@ -103,6 +106,53 @@ extension FleaMarketWriteFormInteractorTests {
     interactor.fetchSelectedCategory(request: .init())
     
     // then
-    XCTAssert(!presenter.isCalledPresentSelectedCategory, "CalledPresentSelectedCategory")
+    XCTAssert(!presenter.isCalledPresentSelectedCategory)
+  }
+  
+  func test_callingPresentSelectedRegionWhenSelectedCategoryIsNotNil() {
+    // given
+    interactor.selectedRegion = Seeds.region
+    
+    // when
+    interactor.fetchSelectedRegion(request: .init())
+    
+    // then
+    XCTAssert(presenter.isCalledPresentSelectedRegion)
+  }
+  
+  func test_notCallingPresentSelectedRegionWhenSelectedCategoryIsNil() {
+    // given
+    interactor.selectedArticleCateogy = nil
+    
+    // when
+    interactor.fetchSelectedRegion(request: .init())
+    
+    // then
+    XCTAssert(!presenter.isCalledPresentSelectedRegion)
+  }
+  
+  func test_callingPresentInputtedPrice() {
+    // given
+    let dummyPrice = "10000"
+    
+    // when
+    interactor.fetchInputtedPrice(request: .init(price: dummyPrice))
+    
+    // then
+    XCTAssert(presenter.isCalledPresentInputtedPrice)
+  }
+  
+  func test_callingPresentSubmitArticle() {
+    // given
+    let dummyRequest = FleaMarketWriteFormModels.SubmitArticle.Request.init(
+      price: nil,
+      content: nil
+    )
+    
+    // when
+    interactor.fetchSubmitArticle(request: dummyRequest)
+    
+    // then
+    XCTAssert(presenter.isCalledPresentSubmitArticle)
   }
 }

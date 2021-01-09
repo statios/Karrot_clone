@@ -21,6 +21,8 @@ final class FleaMarketWriteFormViewControllerTests: XCTestCase {
     var isCalledFetchRegionScene = false
     var isCalledFetchSelectedCategory = false
     var isCalledFetchSelectedRegion = false
+    var isCalledFetchInputtedPrice = false
+    var isCalledFetchSubmitArticle = false
     
     func fetchCategoryScene(request: FleaMarketWriteFormModels.CategoryScene.Request) {
       isCalledFetchCategoryScene = true
@@ -39,11 +41,11 @@ final class FleaMarketWriteFormViewControllerTests: XCTestCase {
     }
 
     func fetchInputtedPrice(request: FleaMarketWriteFormModels.InputtedPrice.Request) {
-
+      isCalledFetchInputtedPrice = true
     }
 
     func fetchSubmitArticle(request: FleaMarketWriteFormModels.SubmitArticle.Request) {
-
+      isCalledFetchSubmitArticle = true
     }
   }
 
@@ -116,7 +118,7 @@ extension FleaMarketWriteFormViewControllerTests {
     )
 
     // then - interactor의 fetchCategoryScene()호출
-    XCTAssert(interactor.isCalledFetchCategoryScene, "CalledFetchCategoryScene")
+    XCTAssert(interactor.isCalledFetchCategoryScene)
   }
   
   func test_callingRouteToCategory() {
@@ -127,8 +129,8 @@ extension FleaMarketWriteFormViewControllerTests {
     viewController.displayCategoryScene(viewModel: dummyViewModel)
     
     // then
-    XCTAssert(router.isCalledRouteToCategory, "CalledRouteToCategory")
-    XCTAssert(router.isCalledPassDataToCategory, "CalledPassDataToCategory")
+    XCTAssert(router.isCalledRouteToCategory)
+    XCTAssert(router.isCalledPassDataToCategory)
   }
   
   func test_callingFetchRegionScene() {
@@ -143,7 +145,7 @@ extension FleaMarketWriteFormViewControllerTests {
     )
     
     // then
-    XCTAssert(interactor.isCalledFetchRegionScene, "CalledFetchRegionScene")
+    XCTAssert(interactor.isCalledFetchRegionScene)
   }
   
   func test_callingRouteToRegion() {
@@ -154,8 +156,8 @@ extension FleaMarketWriteFormViewControllerTests {
     viewController.displayRegionScene(viewModel: dummyViewModel)
     
     // then
-    XCTAssert(router.isCalledRouteToRegion, "CalledRouteToRegion")
-    XCTAssert(router.isCalledPassDataToRegion, "CalledPassDataToRegion")
+    XCTAssert(router.isCalledRouteToRegion)
+    XCTAssert(router.isCalledPassDataToRegion)
   }
   
   func test_callingFetchSelectedCategory() {
@@ -165,7 +167,7 @@ extension FleaMarketWriteFormViewControllerTests {
     viewController.viewWillAppear(true)
     
     // then
-    XCTAssert(interactor.isCalledFetchSelectedCategory, "CalledFetchSelectedCategory")
+    XCTAssert(interactor.isCalledFetchSelectedCategory)
   }
   
   func test_callingFetchSelectedRegion() {
@@ -175,7 +177,31 @@ extension FleaMarketWriteFormViewControllerTests {
     viewController.viewWillAppear(true)
     
     // then
-    XCTAssert(interactor.isCalledFetchSelectedRegion, "CalledFetchSelectedRegion")
+    XCTAssert(interactor.isCalledFetchSelectedRegion)
+  }
+  
+  func test_callingFetchInputtedPrice() {
+    // given
+    let row = viewController.fleaMarketCellKinds
+      .enumerated().first { $0.element == .price }?.offset ?? 2
+    let cell = viewController.tableNode.nodeForRow(at: IndexPath(row: row, section: 0))
+      as? FleaMarketPriceInputCell
+    
+    // when
+    cell?.delegate?.textChanged("123")
+    
+    // then
+    XCTAssert(interactor.isCalledFetchInputtedPrice)
+  }
+  
+  func test_callingFetchSubmitArticle() {
+    // given
+    
+    // when
+    viewController.submitButton.sendActions(for: .touchUpInside)
+    
+    // then
+    XCTAssert(interactor.isCalledFetchSubmitArticle)
   }
 }
 
