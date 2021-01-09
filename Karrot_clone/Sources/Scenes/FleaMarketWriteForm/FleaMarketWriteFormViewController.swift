@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol FleaMarketWriteFormDisplayLogic: class {
   func displayCategoryScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
-  func displayRegionScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel)
+  func displayRegionScene(viewModel: FleaMarketWriteFormModels.RegionScene.ViewModel)
   func displaySelectedCategory(viewModel: FleaMarketWriteFormModels.SelectedCategory.ViewModel)
   func displaySelectedRegion(viewModel: FleaMarketWriteFormModels.SelectedRegion.ViewModel)
   func displayInputtedPrice(viewModel: FleaMarketWriteFormModels.InputtedPrice.ViewModel)
@@ -24,7 +24,7 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
   @Injected var interactor: FleaMarketWriteFormBusinessLogic
   @Injected var router: (FleaMarketWriteFormRoutingLogic & FleaMarketWriteFormDataPassing)
   
-  private let fleaMarketCellKinds = FleaMarketCellKind.allCases
+  let fleaMarketCellKinds = FleaMarketCellKind.allCases
   
   private let closeButton = UIButton().then {
     $0.setTitle("닫기", for: .normal)
@@ -36,7 +36,7 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
     $0.setTitleColor(.systemBlue, for: .normal)
   }
   
-  private lazy var tableNode = ASTableNode().then {
+  lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
     $0.delegate = self
     $0.view.keyboardDismissMode = .onDrag
@@ -133,7 +133,7 @@ extension FleaMarketWriteFormViewController: FleaMarketWriteFormDisplayLogic {
     router.routeToCategory()
   }
   
-  func displayRegionScene(viewModel: FleaMarketWriteFormModels.CategoryScene.ViewModel) {
+  func displayRegionScene(viewModel: FleaMarketWriteFormModels.RegionScene.ViewModel) {
     router.routeToRegion()
   }
   

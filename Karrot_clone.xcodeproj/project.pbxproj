@@ -34,6 +34,12 @@
 		F9B02BBC25A7705B0098F91E /* CategorySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BBB25A7705B0098F91E /* CategorySelectionCell.swift */; };
 		F9B02BC825A842510098F91E /* RegionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BC725A842510098F91E /* RegionSelectionCell.swift */; };
 		F9B02BD025A87F650098F91E /* FreeShareButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02BCF25A87F650098F91E /* FreeShareButtonNode.swift */; };
+		F9B02C3425A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3025A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift */; };
+		F9B02C3525A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3125A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift */; };
+		F9B02C3625A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3225A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift */; };
+		F9B02C3725A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */; };
+		F9B02C4025A982800098F91E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = F9B02C3F25A982800098F91E /* Nimble */; };
+		F9B02C4925AA12FD0098F91E /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C4825AA12FD0098F91E /* Seeds.swift */; };
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
 		F9E7DACB25A5A991007788AC /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACA25A5A991007788AC /* Image.xcassets */; };
 		F9E7DACE25A5A991007788AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E7DACC25A5A991007788AC /* LaunchScreen.storyboard */; };
@@ -44,10 +50,8 @@
 		F9E7DAFE25A5AC19007788AC /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAFA25A5AC19007788AC /* PINRemoteImage.framework */; };
 		F9E7DAFF25A5AC19007788AC /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E7DAFB25A5AC19007788AC /* PINOperation.framework */; };
 		F9E7DB0925A5AD80007788AC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0825A5AD80007788AC /* RxSwift */; };
-		F9E7DB0B25A5AD80007788AC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0A25A5AD80007788AC /* RxTest */; };
 		F9E7DB0D25A5AD80007788AC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0C25A5AD80007788AC /* RxRelay */; };
 		F9E7DB0F25A5AD80007788AC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB0E25A5AD80007788AC /* RxCocoa */; };
-		F9E7DB1125A5AD80007788AC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1025A5AD80007788AC /* RxBlocking */; };
 		F9E7DB1725A5AD98007788AC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1625A5AD98007788AC /* Then */; };
 		F9E7DB1D25A5ADB0007788AC /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F9E7DB1C25A5ADB0007788AC /* Resolver */; };
 		F9E7DB5825A5B09A007788AC /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DB5725A5B09A007788AC /* Logging.swift */; };
@@ -132,6 +136,11 @@
 		F9B02BBB25A7705B0098F91E /* CategorySelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionCell.swift; sourceTree = "<group>"; };
 		F9B02BC725A842510098F91E /* RegionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionCell.swift; sourceTree = "<group>"; };
 		F9B02BCF25A87F650098F91E /* FreeShareButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeShareButtonNode.swift; sourceTree = "<group>"; };
+		F9B02C3025A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormViewControllerTests.swift; sourceTree = "<group>"; };
+		F9B02C3125A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormInteractorTests.swift; sourceTree = "<group>"; };
+		F9B02C3225A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormWorkerTests.swift; sourceTree = "<group>"; };
+		F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketWriteFormPresenterTests.swift; sourceTree = "<group>"; };
+		F9B02C4825AA12FD0098F91E /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		F9E7DABE25A5A990007788AC /* Karrot_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karrot_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E7DAC125A5A990007788AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E7DACA25A5A991007788AC /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -205,8 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E7DB0B25A5AD80007788AC /* RxTest in Frameworks */,
-				F9E7DB1125A5AD80007788AC /* RxBlocking in Frameworks */,
+				F9B02C4025A982800098F91E /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +317,28 @@
 		F9B02BD825A8DAC70098F91E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9B02C2F25A8ECB30098F91E /* FleaMarketWriteForm */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F9B02C2F25A8ECB30098F91E /* FleaMarketWriteForm */ = {
+			isa = PBXGroup;
+			children = (
+				F9B02C3025A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift */,
+				F9B02C3125A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift */,
+				F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */,
+				F9B02C3225A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift */,
+			);
+			path = FleaMarketWriteForm;
+			sourceTree = "<group>";
+		};
+		F9B02C4725AA12ED0098F91E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9B02C4825AA12FD0098F91E /* Seeds.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F9E7DAB525A5A990007788AC = {
@@ -348,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				F9B02BD725A8DAC00098F91E /* Sources */,
+				F9B02C4725AA12ED0098F91E /* Resources */,
 				F9E7DAD825A5A991007788AC /* Karrot_cloneTests.swift */,
 				F9E7DADA25A5A991007788AC /* Info.plist */,
 			);
@@ -650,8 +679,7 @@
 			);
 			name = Karrot_cloneTests;
 			packageProductDependencies = (
-				F9E7DB0A25A5AD80007788AC /* RxTest */,
-				F9E7DB1025A5AD80007788AC /* RxBlocking */,
+				F9B02C3F25A982800098F91E /* Nimble */,
 			);
 			productName = Karrot_cloneTests;
 			productReference = F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */;
@@ -710,6 +738,7 @@
 				F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F9E7DB1525A5AD98007788AC /* XCRemoteSwiftPackageReference "Then" */,
 				F9E7DB1B25A5ADB0007788AC /* XCRemoteSwiftPackageReference "Resolver" */,
+				F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = F9E7DABF25A5A990007788AC /* Products */;
 			projectDirPath = "";
@@ -848,7 +877,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B02C3525A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift in Sources */,
+				F9B02C3725A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift in Sources */,
+				F9B02C4925AA12FD0098F91E /* Seeds.swift in Sources */,
+				F9B02C3425A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift in Sources */,
 				F9E7DAD925A5A991007788AC /* Karrot_cloneTests.swift in Sources */,
+				F9B02C3625A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1211,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1204,15 +1246,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F9B02C3F25A982800098F91E /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
 		F9E7DB0825A5AD80007788AC /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		F9E7DB0A25A5AD80007788AC /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		F9E7DB0C25A5AD80007788AC /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1223,11 +1265,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
-		};
-		F9E7DB1025A5AD80007788AC /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
 		};
 		F9E7DB1625A5AD98007788AC /* Then */ = {
 			isa = XCSwiftPackageProductDependency;

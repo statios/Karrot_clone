@@ -15,6 +15,14 @@ protocol FleaMarketWriteFormRoutingLogic: class {
 
 protocol FleaMarketWriteFormDataPassing: class {
   var dataStore: FleaMarketWriteFormDataStore { get set }
+  func passDataToCategory(
+    source: FleaMarketWriteFormDataStore,
+    destination: inout CategoryDataStore
+  )
+  func passDataToRegion(
+    source: FleaMarketWriteFormDataStore,
+    destination: inout RegionDataStore
+  )
 }
 
 final class FleaMarketWriteFormRouter: BaseRouter, FleaMarketWriteFormDataPassing {
