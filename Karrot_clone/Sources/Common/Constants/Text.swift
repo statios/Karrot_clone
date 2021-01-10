@@ -8,5 +8,7 @@
 import Foundation
 
 struct Text {
-
+  static let close = "닫기"
+  static let submit = "제출"
+  static let confirm = "확인"
 }

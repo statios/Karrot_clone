@@ -27,12 +27,12 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
   let fleaMarketCellKinds = FleaMarketCellKind.allCases
   
   private let closeButton = UIButton().then {
-    $0.setTitle("닫기", for: .normal)
+    $0.setTitle(Text.close, for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
   
   let submitButton = UIButton().then {
-    $0.setTitle("제출", for: .normal)
+    $0.setTitle(Text.submit, for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
   
@@ -71,20 +71,9 @@ extension FleaMarketWriteFormViewController {
 extension FleaMarketWriteFormViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.leftBarButtonItem = closeButton.asBarButtonItem()
-    navigationItem.rightBarButtonItem = submitButton.asBarButtonItem()
-    
-    closeButton.rx.tap
-      .bind { [weak self] in
-        self?.dismiss(animated: true)
-      }.disposed(by: disposeBag)
-    
-    RxKeyboard.instance.visibleHeight
-      .drive(onNext: { [weak self] in
-        guard let `self` = self else { return }
-        self.keyboardHeight = $0
-        self.node.setNeedsLayout()
-      }).disposed(by: disposeBag)
+    setupNaigationItems()
+    dismissWhenDidTapCloseButton()
+    layoutUpdateWhenChangeKeyboard()
   }
 }
 
@@ -138,23 +127,17 @@ extension FleaMarketWriteFormViewController: FleaMarketWriteFormDisplayLogic {
   }
   
   func displaySelectedCategory(viewModel: FleaMarketWriteFormModels.SelectedCategory.ViewModel) {
-    let row = fleaMarketCellKinds.enumerated().first { $0.element == .category }.map { $0.offset }
-    let indexPath = IndexPath(row: row ?? 0, section: 0)
-    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketSelectionCell
+    let cell = nodeForRow(kind: .category) as? FleaMarketSelectionCell
     cell?.configure(title: viewModel.categoryName)
   }
   
   func displaySelectedRegion(viewModel: FleaMarketWriteFormModels.SelectedRegion.ViewModel) {
-    let row = fleaMarketCellKinds.enumerated().first { $0.element == .region }.map { $0.offset }
-    let indexPath = IndexPath(row: row ?? 1, section: 0)
-    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketSelectionCell
+    let cell = nodeForRow(kind: .region) as? FleaMarketSelectionCell
     cell?.configure(title: viewModel.regionName)
   }
   
   func displayInputtedPrice(viewModel: FleaMarketWriteFormModels.InputtedPrice.ViewModel) {
-    let row = fleaMarketCellKinds.enumerated().first { $0.element == .price }.map { $0.offset }
-    let indexPath = IndexPath(row: row ?? 2, section: 0)
-    let cell = tableNode.nodeForRow(at: indexPath) as? FleaMarketPriceInputCell
+    let cell = nodeForRow(kind: .price) as? FleaMarketPriceInputCell
     cell?.configure(viewModel.price)
   }
   
@@ -162,7 +145,7 @@ extension FleaMarketWriteFormViewController: FleaMarketWriteFormDisplayLogic {
     showAlert(
       title: viewModel.title,
       message: viewModel.errorMessage,
-      button: "확인"
+      button: Text.confirm
     ) { [weak self] _ in
       guard viewModel.isSuccess else { return }
       self?.dismiss(animated: true)
@@ -210,6 +193,7 @@ extension FleaMarketWriteFormViewController: ASTableDataSource, ASTableDelegate 
   }
 }
 
+// MARK: - FleaMarketPriceInputCell Delegate
 extension FleaMarketWriteFormViewController: FleaMarketPriceInputCellDelegate {
   func textChanged(_ text: String?) {
     interactor.fetchInputtedPrice(request: .init(price: text))
@@ -217,6 +201,7 @@ extension FleaMarketWriteFormViewController: FleaMarketPriceInputCellDelegate {
   }
 }
 
+// MARK: - FleaMarketContentFieldCell Delegate
 extension FleaMarketWriteFormViewController: FleaMarketContentFieldCellDelegate {
   func chagnedTextViewLineOfNumbers() {
     tableNode.scrollToRow(
@@ -228,5 +213,35 @@ extension FleaMarketWriteFormViewController: FleaMarketContentFieldCellDelegate 
   
   func textChanged(_ textView: UITextView, _ text: String?) {
     currentContent = text
+  }
+}
+
+// MARK: - Helpers
+extension FleaMarketWriteFormViewController {
+  private func setupNaigationItems() {
+    navigationItem.leftBarButtonItem = closeButton.asBarButtonItem()
+    navigationItem.rightBarButtonItem = submitButton.asBarButtonItem()
+  }
+  
+  private func dismissWhenDidTapCloseButton() {
+    closeButton.rx.tap
+      .bind { [weak self] in
+        self?.dismiss(animated: true)
+      }.disposed(by: disposeBag)
+  }
+  
+  private func layoutUpdateWhenChangeKeyboard() {
+    RxKeyboard.instance.visibleHeight
+      .drive(onNext: { [weak self] in
+        guard let `self` = self else { return }
+        self.keyboardHeight = $0
+        self.node.setNeedsLayout()
+      }).disposed(by: disposeBag)
+  }
+  
+  private func nodeForRow(kind: FleaMarketCellKind) -> ASCellNode? {
+    let row = fleaMarketCellKinds.enumerated().first { $0.element == kind }.map { $0.offset }
+    let indexPath = IndexPath(row: row ?? 0, section: 0)
+    return tableNode.nodeForRow(at: indexPath)
   }
 }
