@@ -46,7 +46,6 @@
 		F9B02C3525A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3125A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift */; };
 		F9B02C3625A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3225A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift */; };
 		F9B02C3725A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C3325A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift */; };
-		F9B02C4025A982800098F91E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = F9B02C3F25A982800098F91E /* Nimble */; };
 		F9B02C4925AA12FD0098F91E /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C4825AA12FD0098F91E /* Seeds.swift */; };
 		F9B02C5125AA41090098F91E /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B02C5025AA41090098F91E /* Text.swift */; };
 		F9E7DAC225A5A990007788AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7DAC125A5A990007788AC /* AppDelegate.swift */; };
@@ -232,7 +231,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9B02C4025A982800098F91E /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +720,6 @@
 			);
 			name = Karrot_cloneTests;
 			packageProductDependencies = (
-				F9B02C3F25A982800098F91E /* Nimble */,
 			);
 			productName = Karrot_cloneTests;
 			productReference = F9E7DAD425A5A991007788AC /* Karrot_cloneTests.xctest */;
@@ -781,7 +778,6 @@
 				F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F9E7DB1525A5AD98007788AC /* XCRemoteSwiftPackageReference "Then" */,
 				F9E7DB1B25A5ADB0007788AC /* XCRemoteSwiftPackageReference "Resolver" */,
-				F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = F9E7DABF25A5A990007788AC /* Products */;
 			projectDirPath = "";
@@ -1263,14 +1259,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1298,11 +1286,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F9B02C3F25A982800098F91E /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9B02C3E25A982800098F91E /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
 		F9E7DB0825A5AD80007788AC /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F9E7DB0725A5AD80007788AC /* XCRemoteSwiftPackageReference "RxSwift" */;
