@@ -14,6 +14,10 @@ protocol CategoryRoutingLogic: class {
 
 protocol CategoryDataPassing: class {
   var dataStore: CategoryDataStore { get set }
+  func passDataToFleaMarketWriteForm(
+    source: CategoryDataStore,
+    destination: inout FleaMarketWriteFormDataStore
+  )
 }
 
 final class CategoryRouter: BaseRouter, CategoryDataPassing {

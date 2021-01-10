@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92B8D5725AAE365000D62F4 /* CategoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D5325AAE365000D62F4 /* CategoryViewControllerTests.swift */; };
+		F92B8D5825AAE365000D62F4 /* CategoryInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D5425AAE365000D62F4 /* CategoryInteractorTests.swift */; };
+		F92B8D5925AAE365000D62F4 /* CategoryWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D5525AAE365000D62F4 /* CategoryWorkerTests.swift */; };
+		F92B8D5A25AAE365000D62F4 /* CategoryPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D5625AAE365000D62F4 /* CategoryPresenterTests.swift */; };
+		F92B8D6625AB6DDD000D62F4 /* RegionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D6225AB6DDD000D62F4 /* RegionViewControllerTests.swift */; };
+		F92B8D6725AB6DDD000D62F4 /* RegionInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D6325AB6DDD000D62F4 /* RegionInteractorTests.swift */; };
+		F92B8D6825AB6DDD000D62F4 /* RegionWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D6425AB6DDD000D62F4 /* RegionWorkerTests.swift */; };
+		F92B8D6925AB6DDD000D62F4 /* RegionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B8D6525AB6DDD000D62F4 /* RegionPresenterTests.swift */; };
 		F9A7A5D825A61399004CFA9E /* BaseTableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5D725A61399004CFA9E /* BaseTableNode.swift */; };
 		F9A7A5E225A6BA0B004CFA9E /* RxKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5E125A6BA0B004CFA9E /* RxKeyboard.swift */; };
 		F9A7A5EA25A6BCD4004CFA9E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A5E925A6BCD4004CFA9E /* Device.swift */; };
@@ -110,6 +118,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F92B8D5325AAE365000D62F4 /* CategoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerTests.swift; sourceTree = "<group>"; };
+		F92B8D5425AAE365000D62F4 /* CategoryInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractorTests.swift; sourceTree = "<group>"; };
+		F92B8D5525AAE365000D62F4 /* CategoryWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWorkerTests.swift; sourceTree = "<group>"; };
+		F92B8D5625AAE365000D62F4 /* CategoryPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenterTests.swift; sourceTree = "<group>"; };
+		F92B8D6225AB6DDD000D62F4 /* RegionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewControllerTests.swift; sourceTree = "<group>"; };
+		F92B8D6325AB6DDD000D62F4 /* RegionInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInteractorTests.swift; sourceTree = "<group>"; };
+		F92B8D6425AB6DDD000D62F4 /* RegionWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionWorkerTests.swift; sourceTree = "<group>"; };
+		F92B8D6525AB6DDD000D62F4 /* RegionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPresenterTests.swift; sourceTree = "<group>"; };
 		F9A7A5D725A61399004CFA9E /* BaseTableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNode.swift; sourceTree = "<group>"; };
 		F9A7A5E125A6BA0B004CFA9E /* RxKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboard.swift; sourceTree = "<group>"; };
 		F9A7A5E925A6BCD4004CFA9E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -230,6 +246,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F92B8D3D25AAE32E000D62F4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F92B8D5325AAE365000D62F4 /* CategoryViewControllerTests.swift */,
+				F92B8D5425AAE365000D62F4 /* CategoryInteractorTests.swift */,
+				F92B8D5625AAE365000D62F4 /* CategoryPresenterTests.swift */,
+				F92B8D5525AAE365000D62F4 /* CategoryWorkerTests.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F92B8D6125AB6DCF000D62F4 /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				F92B8D6225AB6DDD000D62F4 /* RegionViewControllerTests.swift */,
+				F92B8D6325AB6DDD000D62F4 /* RegionInteractorTests.swift */,
+				F92B8D6425AB6DDD000D62F4 /* RegionWorkerTests.swift */,
+				F92B8D6525AB6DDD000D62F4 /* RegionPresenterTests.swift */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
 		F9A7A5E025A6BA01004CFA9E /* RxKeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				F9B02C2F25A8ECB30098F91E /* FleaMarketWriteForm */,
+				F92B8D3D25AAE32E000D62F4 /* Category */,
+				F92B8D6125AB6DCF000D62F4 /* Region */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -883,10 +923,18 @@
 			files = (
 				F9B02C3525A8ECD20098F91E /* FleaMarketWriteFormInteractorTests.swift in Sources */,
 				F9B02C3725A8ECD20098F91E /* FleaMarketWriteFormPresenterTests.swift in Sources */,
+				F92B8D5925AAE365000D62F4 /* CategoryWorkerTests.swift in Sources */,
 				F9B02C4925AA12FD0098F91E /* Seeds.swift in Sources */,
+				F92B8D6725AB6DDD000D62F4 /* RegionInteractorTests.swift in Sources */,
+				F92B8D6825AB6DDD000D62F4 /* RegionWorkerTests.swift in Sources */,
+				F92B8D5A25AAE365000D62F4 /* CategoryPresenterTests.swift in Sources */,
 				F9B02C3425A8ECD20098F91E /* FleaMarketWriteFormViewControllerTests.swift in Sources */,
+				F92B8D5825AAE365000D62F4 /* CategoryInteractorTests.swift in Sources */,
+				F92B8D6625AB6DDD000D62F4 /* RegionViewControllerTests.swift in Sources */,
 				F9E7DAD925A5A991007788AC /* Karrot_cloneTests.swift in Sources */,
 				F9B02C3625A8ECD20098F91E /* FleaMarketWriteFormWorkerTests.swift in Sources */,
+				F92B8D6925AB6DDD000D62F4 /* RegionPresenterTests.swift in Sources */,
+				F92B8D5725AAE365000D62F4 /* CategoryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

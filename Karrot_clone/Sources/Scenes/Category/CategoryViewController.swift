@@ -22,7 +22,7 @@ final class CategoryViewController: BaseASViewController {
   
   private var categories = [ArticleCategory]()
   
-  private lazy var tableNode = ASTableNode().then {
+  lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
     $0.delegate = self
   }
