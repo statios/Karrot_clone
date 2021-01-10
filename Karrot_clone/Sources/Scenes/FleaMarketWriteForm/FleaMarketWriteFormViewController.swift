@@ -31,7 +31,7 @@ final class FleaMarketWriteFormViewController: BaseASViewController {
     $0.setTitleColor(.systemBlue, for: .normal)
   }
   
-  let submitButton = UIButton().then {
+  private let submitButton = UIButton().then {
     $0.setTitle(Text.submit, for: .normal)
     $0.setTitleColor(.systemBlue, for: .normal)
   }
