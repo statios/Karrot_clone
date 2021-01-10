@@ -8,15 +8,23 @@
 import XCTest
 import Nimble
 
-@testable import daangna
+@testable import Karrot_clone
 
 final class RegionPresenterTests: XCTestCase {
   
   // MARK: Test Double Objects
   
   final class RegionDisplaySpy: RegionDisplayLogic {
+    var isCalledDisplayRegions = false
+    var isCalledDisplaySelectRegion = false
     
-    // var somethingOutput: ViewModel? 
+    func displayRegions(viewModel: RegionModels.Regions.ViewModel) {
+      isCalledDisplayRegions = true
+    }
+    
+    func displaySelectRegion(viewModel: RegionModels.SelectRegion.ViewModel) {
+      isCalledDisplaySelectRegion = true
+    }
   }
   
 
@@ -28,7 +36,7 @@ final class RegionPresenterTests: XCTestCase {
   override func setUp() {
     self.presenter = RegionPresenter()
     self.display = RegionDisplaySpy()
-    self.presenter.view = self.display
+    self.presenter.viewController = self.display
   }
 }
 
@@ -37,11 +45,24 @@ final class RegionPresenterTests: XCTestCase {
 
 extension RegionPresenterTests {
   
-  func test_doSomething() {
+  func test_callingDisplayRegions() {
+    // given
+    let regions = Seeds.regions
+    
+    // when
+    presenter.presentRegions(response: .init(result: regions))
+    
+    // then
+    XCTAssert(display.isCalledDisplayRegions)
+  }
+  
+  func test_callingDisplaySelectRegion() {
     // given
     
     // when
+    presenter.presentSelectRegion(response: .init())
     
     // then
+    XCTAssert(display.isCalledDisplaySelectRegion)
   }
 }

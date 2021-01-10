@@ -8,24 +8,33 @@
 import XCTest
 import Nimble
 
-@testable import daangna
+@testable import Karrot_clone
 
 final class RegionInteractorTests: XCTestCase {
 
   // MARK: Test Double Objects
 
   final class RegionPresenterSpy: RegionPresentationLogic {
-
-    // var somethingCalled: Int = 0
-    // var somethingStub: Value?
+    
+    var isCalledPresentRegions = false
+    var isCalledPresentSelectRegion = false
+    
+    func presentRegions(response: RegionModels.Regions.Response) {
+      isCalledPresentRegions = true
+    }
+    
+    func presentSelectRegion(response: RegionModels.SelectRegion.Response) {
+      isCalledPresentSelectRegion = true
+    }
   }
 
   final class RegionWorkerSpy: RegionWorkerLogic {
-
-    // var somethingCalled: Int = 0
-    // var somethingStub: Value?
-
-    // func something() { ... }
+    var isCalledGetRegions = false
+    
+    func getRegions() -> [Region] {
+      isCalledGetRegions = true
+      return Seeds.regions
+    }
   }
 
 
@@ -49,11 +58,35 @@ final class RegionInteractorTests: XCTestCase {
 
 extension RegionInteractorTests {
 
-  func test_doSomething() {
+  func test_callingPresentRegions() {
     // given
 
     // when
+    interactor.fetchRegions(request: .init())
 
     // then
+    XCTAssert(presenter.isCalledPresentRegions)
+  }
+  
+  func test_callingGetRegions() {
+    // given
+
+    // when
+    interactor.fetchRegions(request: .init())
+
+    // then
+    XCTAssert(worker.isCalledGetRegions)
+  }
+  
+  func test_callingPresentSelectRegion() {
+    // given
+    let indexPath = IndexPath(row: 0, section: 0)
+    interactor.fetchRegions(request: .init())
+    
+    // when
+    interactor.fetchSelectedRegion(request: .init(indexPath: indexPath))
+    
+    // then
+    XCTAssert(presenter.isCalledPresentSelectRegion)
   }
 }

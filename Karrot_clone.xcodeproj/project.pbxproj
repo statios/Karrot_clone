@@ -262,8 +262,8 @@
 			children = (
 				F92B8D6225AB6DDD000D62F4 /* RegionViewControllerTests.swift */,
 				F92B8D6325AB6DDD000D62F4 /* RegionInteractorTests.swift */,
-				F92B8D6425AB6DDD000D62F4 /* RegionWorkerTests.swift */,
 				F92B8D6525AB6DDD000D62F4 /* RegionPresenterTests.swift */,
+				F92B8D6425AB6DDD000D62F4 /* RegionWorkerTests.swift */,
 			);
 			path = Region;
 			sourceTree = "<group>";

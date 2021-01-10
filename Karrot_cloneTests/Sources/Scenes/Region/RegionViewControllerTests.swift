@@ -7,26 +7,54 @@
 
 import XCTest
 import Nimble
+import Resolver
 
-@testable import daangna
+@testable import Karrot_clone
 
 final class RegionViewControllerTests: XCTestCase {
 
   // MARK: Test Double Objects
 
   final class RegionInteractorSpy: RegionBusinessLogic {
-
-    // var somethingCalled: Int = 0
-    // func something() { ... }
+    
+    var isCalledFetchRegions = false
+    var isCalledFetchSelectedRegion = false
+    
+    func fetchRegions(request: RegionModels.Regions.Request) {
+      isCalledFetchRegions = true
+    }
+    
+    func fetchSelectedRegion(request: RegionModels.SelectRegion.Request) {
+      isCalledFetchSelectedRegion = true
+    }
   }
 
   final class RegionRouterSpy: RegionRoutingLogic, RegionDataPassing {
-    var dataStore: RegionDataStore?
-
-    // var somethingCalled: Int = 0
-    // func something() { ... }
+    
+    @Injected var dataStore: RegionDataStore
+    var isCalledRouteToRouteToFleaMarketWriteForm = false
+    var isCalledPassDataToFleaMarketWriteForm = false
+    
+    func routeToFleaMarketWriteForm() {
+      isCalledRouteToRouteToFleaMarketWriteForm = true
+      
+      guard let destinationVC = Scene.fleaMarketWriteForm.viewController
+              as? FleaMarketWriteFormViewController else { return }
+      var destinationDS = destinationVC.router.dataStore
+      
+      passDataToFleaMarketWriteForm(
+        source: dataStore,
+        destination: &destinationDS
+      )
+    }
+    
+    func passDataToFleaMarketWriteForm(
+      source: RegionDataStore,
+      destination: inout FleaMarketWriteFormDataStore
+    ) {
+      isCalledPassDataToFleaMarketWriteForm = true
+    }
   }
-
 
   // MARK: Properties
 
@@ -48,12 +76,40 @@ final class RegionViewControllerTests: XCTestCase {
 
 extension RegionViewControllerTests {
 
-  func test_doSomething() {
+  func test_callingFetchArticleCategories() {
     // given
-
+    
     // when
+    viewController.viewWillAppear(true)
 
     // then
+    XCTAssert(interactor.isCalledFetchRegions)
+  }
+  
+  func test_callingFetchSelectCategory() {
+    // given
+    let row = 0
+    
+    // when
+    viewController.tableNode.delegate?.tableNode?(
+      viewController.tableNode,
+      didSelectRowAt: IndexPath(row: row, section: 0)
+    )
+    
+    // then
+    XCTAssert(interactor.isCalledFetchSelectedRegion)
+  }
+  
+  func test_callingRouteToFleaMarketWriteForm() {
+    // given
+    let viewModel = RegionModels.SelectRegion.ViewModel.init()
+    
+    // when
+    viewController.displaySelectRegion(viewModel: viewModel)
+    
+    // then
+    XCTAssert(router.isCalledRouteToRouteToFleaMarketWriteForm)
+    XCTAssert(router.isCalledPassDataToFleaMarketWriteForm)
   }
 }
 

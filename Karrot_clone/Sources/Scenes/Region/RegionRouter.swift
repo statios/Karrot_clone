@@ -14,6 +14,10 @@ protocol RegionRoutingLogic: class {
 
 protocol RegionDataPassing: class {
   var dataStore: RegionDataStore { get set }
+  func passDataToFleaMarketWriteForm(
+    source: RegionDataStore,
+    destination: inout FleaMarketWriteFormDataStore
+  )
 }
 
 final class RegionRouter: BaseRouter, RegionDataPassing {

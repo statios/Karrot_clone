@@ -8,18 +8,16 @@
 import XCTest
 import Nimble
 
-@testable import daangna
+@testable import Karrot_clone
 
 final class RegionWorkerTests: XCTestCase {
 
   // MARK: Test Double Objects
 
   final class RegionWorkerSpy: RegionWorkerLogic {
-
-    // var somethingCalled: Int = 0
-    // var somethingStub: Value?
-
-    // func something() { ... }
+    func getRegions() -> [Region] {
+      return Seeds.regions
+    }
   }
 
 

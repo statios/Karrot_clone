@@ -22,7 +22,7 @@ final class RegionViewController: BaseASViewController {
   
   private var regions = [Region]()
   
-  private lazy var tableNode = ASTableNode().then {
+  lazy var tableNode = ASTableNode().then {
     $0.dataSource = self
     $0.delegate = self
   }
